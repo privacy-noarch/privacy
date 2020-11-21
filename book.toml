@@ -6,9 +6,12 @@ src = "src"
 title = "privacy.noarch"
 
 [output.html]
+# disable automatic dark theme to not break images
 preferred-dark-theme = "light"
 
+# add custom TOC and fonts
 additional-css = ["sidebar.css", "fonts.css"]
 additional-js = ["sidebar.js"]
 
+# do not use webfonts other than FA, speeds up loading and saves bandwidth
 copy-fonts = false
