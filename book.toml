@@ -15,3 +15,6 @@ additional-js = ["sidebar.js"]
 
 # do not use webfonts other than FA, speeds up loading and saves bandwidth
 copy-fonts = false
+
+git-repository-url = "https://git.n0ar.ch/privacy"
+git-repository-icon = "fa-git"
