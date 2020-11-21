@@ -243,7 +243,7 @@ PGP 的主要功能就是保护信息的内容私密，真实且未被篡改。�
 
 本译文部分参考现有（过时）的译文：[公開金鑰加密和 PGP 簡介](https://ocftw.github.io/ssd.eff.org/zh_TW/module/introduction-public-key-cryptography-and-pgp.html)，由台湾开放文化基金会及其志工翻译。
 
-转载本译文请同时注明本文和原文。
+`privacy.noarch` 与原文发布者*电子前哨基金会*无隶属关系；转载本译文请同时注明本文和原文。
 
 创建：2020-11-18, *noarch*  
-最后修改：2020-11-20, *noarch*
+最后修改：2020-11-21, *noarch*
