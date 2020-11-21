@@ -127,7 +127,7 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 现代的加密方式种类繁多。根据你要加密的数据类型，*noarch* 会主要介绍两种加密方式：
 
 - PGP (Pretty Good Privacy, 在隐私方面相当好), 饱经考验的非对称（公钥）加密，主要用于加密电子邮件，聊天和单个文件
-	- [`privacy.noarch` 对 PGP 的介绍](PGP.md)
+	- [公钥加密简介](Pubkey/Pubkey.md)
 	- PGP 在各个平台上的实现
 		- Android: [Openkeychain](android/Encryption/Openkeychain/Openkeychain.md)
 		- Windows: [Gpg4win](), [Thunderbird（集成）]()
@@ -141,4 +141,4 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 ---
 
 创建：2020-11-18, *noarch*  
-最后修改：2020-11-18, *noarch*
+最后修改：2020-11-21, *noarch*
