@@ -1,0 +1,15 @@
+/* overrides the default Open Sans - sans-serif font settings that causes incorrect font substitution */
+
+html {
+    font-family: "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", sans-serif;
+    color: var(--fg);
+    background-color: var(--bg);
+    text-size-adjust: none;
+}
+
+/* i hate source code pro( */
+
+code {
+    font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", monospace, monospace !important;
+    font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+}

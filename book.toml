@@ -1,0 +1,14 @@
+[book]
+authors = ["noarch"]
+language = "zh-Hans"
+multilingual = false
+src = "src"
+title = "privacy.noarch"
+
+[output.html]
+preferred-dark-theme = "light"
+
+additional-css = ["sidebar.css", "fonts.css"]
+additional-js = ["sidebar.js"]
+
+copy-fonts = false
