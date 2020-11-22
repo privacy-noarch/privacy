@@ -42,6 +42,7 @@
 
 - [在享受自由言论之前：“分裂人格”的魅力]()
 	- [[转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法](Identities/iYP:DID/iYP:DID.md)
+	- [[转载] 一个网友的“个人网络身份整改方案”](Identities/WIM-IDImplementation/WIM.md)
 
 - [在网络围墙外社交]()
 	- [中心化]()
