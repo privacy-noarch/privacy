@@ -5,19 +5,45 @@
 ## 简单的
 
 对 `privacy.noarch` 有意见吗？想要协助编写 `privacy.noarch` 吗？
-加入我们的 [<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 群组！](https://t.me/chat_privacy_noarch)
+
+加入我们的 [<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 群组](https://t.me/chat_privacy_noarch)!
 
 ## 直接的
 
 你也可以直接为 `privacy.noarch` 编写文章！
 
-### 构建
+### 使用 `git` 与源码交互
 
 `privacy.noarch` 主要使用 Markdown 编写并用 [mdBook](https://github.com/rust-lang/mdBook) 生成网页。
 
-`privacy.noarch` 还用 git 进行版本管理；为了避免连累例如 GitHub 的平台， `privacy.noarch` 的仓库是自托管的。*noarch* 目前还没有好方案将仓库公开，并接受类似 GitHub 的 issues 以及 pull requests. 很抱歉你需要用远古方法来做贡献：在 Telegram 群组或是找 *noarch*,  `privacy.noarch` 的发起者讨论文章的编写。
+`privacy.noarch` 还用 git 进行版本管理；为了避免“连累”例如 GitHub 的平台， `privacy.noarch` 的仓库是自托管的。
 
-[<i class="fa fa-telegram" aria-hidden="true"></i> @noarchwastaken](https://t.me/noarchwastaken)
+只读的源码仓库在[这里](https://git.n0ar.ch/privacy/)，并配备了一个简单的 `cgit` 可视化。你可以 `clone` 仓库然后在本地进行修改：
+
+```
+$ git clone https://git.n0ar.ch/privacy/
+```
+
+因为仓库是只读的，你无法直接 `push` 修改。不过你可以生成一个 `patch` 然后手动发给 *noarch* 或是 `privacy.noarch` 群：
+
+```
+$ git branch new-article
+# 切换到新分支，然后开始工作
+$ git switch new-article
+# 将新分支与 master 的拆分信息打包进一个 patch
+$ git format-patch master --stdout --binary > new-article.patch
+```
+
+然后你就可以把这个 patch 发送给 *noarch* 了！*noarch* 将会应用你的 `patch` 然后将其 `push` 到服务器上。下面是 *noarch* 在接到你的 `patch` 之后会做的：
+
+```
+$ git am --signoff new-article.patch
+$ git push
+```
+
+关于更多使用 `git` 合作的技巧，请看 [Chacon, S., and Straub, Ben. *Pro Git*. 2nd ed.](https://git-scm.com/book/zh/v2)
+
+你可以在 [<i class="fa fa-telegram" aria-hidden="true"></i> @noarchwastaken](https://t.me/noarchwastaken) 直接找到 *noarch*.
 
 ### 文本格式
 
