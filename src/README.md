@@ -49,9 +49,9 @@ CloudFlare 也被指控对 Tor 用户不友好。*noarch* 本人是 Tor 的重�
 
 ## 来贡献和摸鱼！
 
-[<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 频道](https://t.me/privacy_noarch) | [<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 群组](https://t.me/chat_privacy_noarch)
+[<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 频道](https://t.me/privacy_noarch) | [<i class="fa fa-telegram" aria-hidden="true"></i> Telegram 群组](https://t.me/chat_privacy_noarch) | [<i class="fa fa-git" aria-hidden="true"></i> 仓库](https://git.n0ar.ch/privacy)
 
-本书以及其它 `privacy.noarch` 系列项目使用自托管的 `git` 进行版本管理，但暂时没有考虑将仓库公开。
+本书使用自托管的 `git` 进行版本管理，并配有 `cgit` 用于可视化预览。
 
 如果你想做更直接的贡献 ~~帮 *noarch* 填坑~~ ，请见[反馈与贡献](CONTRIBUTING.md)！
 
