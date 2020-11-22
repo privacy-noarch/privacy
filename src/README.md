@@ -10,16 +10,6 @@
 - 隐私保护的理论，技巧，提示以及注意事项
 - ... 还有更多！
 
-## 设备 / 操作系统独有教程
-
-这里是 `privacy.noarch` 的理论教程。就像任何其它的学习，你需要将理论和实际结合。
-
-*noarch* 为了整洁性，将不同设备和操作系统专有的操作教程单独管理：
-
-- [Android](android/index.html)
-- [Windows](windows/index.html)
-- [MacOS](macos/index.html)
-
 ## 关于主要作者
 
 noarch, 或写作 *.noarch*
@@ -70,4 +60,4 @@ CloudFlare 也被指控对 Tor 用户不友好。*noarch* 本人是 Tor 的重�
 ---
 
 创建：2020-10-05, *noarch*  
-最后修改：2020-11-21, *noarch*
+最后修改：2020-11-22, *noarch*
