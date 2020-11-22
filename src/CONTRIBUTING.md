@@ -28,9 +28,9 @@ $ git clone https://git.n0ar.ch/privacy/
 
 ```
 $ git branch new-article
-# 切换到新分支，然后开始工作
+[ 切换到新分支，然后开始工作 ]
 $ git switch new-article
-# 将新分支与 master 的拆分信息打包进一个 patch
+[ 将新分支与 master 的拆分信息打包进一个 patch ]
 $ git format-patch master --stdout --binary > new-article.patch
 ```
 
