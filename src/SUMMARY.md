@@ -16,7 +16,7 @@
 	- [[Android] Bromite](Browsers/Bromite/Bromite.md)
 	- [[Desktop/All] Firefox]()
 		- [**使用插件来增强浏览体验 ^**]()
-	- [**[Desktop/All]Tor Browser ^**]()
+	- [**[Desktop/All]Tor Browser ^**](Browsers/TBB/TBB.md)
 	
 - [自由打字，打字自由](Input/Input.md)
 	- [[Android] 禁止输入法联网](Input/NoNetworkAccess/NoNetworkAccess.md)
@@ -39,6 +39,7 @@
 		- [V2Ray]()
 		- [Trojan]()
 		- [Shadowsocks*]()
+		- [**Tor ^**]()
 
 - [在享受自由言论之前：“分裂人格”的魅力]()
 	- [[转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法](Identities/iYP:DID/iYP:DID.md)
