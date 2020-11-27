@@ -22,10 +22,10 @@
 	- [[Android] 禁止输入法联网](Input/NoNetworkAccess/NoNetworkAccess.md)
 	- [**同文输入法 (TRIME) ^**]()
 	
-- [帐号安全：保护，隔离，整理]()
-	- [让密码管理器帮你记住密码]()
+- [帐号安全：保护，隔离，整理](Passwords/Passwords.md)
+	- [让密码管理器帮你记住密码](Passwords/PasswordManagers.md)
 		- [[Android] Bitwarden]()
-		- [[Desktop/All] Bitwarden]()
+		- [[Web] Bitwarden]()
 		- [**[Desktop/All] KeePassXC ^**]()
 	- [二步验证 - 增强帐号安全]()
 		- [[Android] andOTP]()
