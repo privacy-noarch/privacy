@@ -63,7 +63,7 @@
 
 
 - [加密，加密一切](Encryption/Encryption.md)
-	- [公钥加密简介](Encryption/Pubkey/Pubkey.md)
+	- [[翻译] 公钥加密简介](Encryption/Pubkey/Pubkey.md)
 	- [[Android] PGP: OpenKeychain](Encryption/OpenKeychain/OpenKeychain.md)
 
 - [**Android 玩机技巧 ^**]()
