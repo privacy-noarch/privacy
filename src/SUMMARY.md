@@ -7,6 +7,7 @@
 [前言]()
 
 - [在开始前]()
+	- [常见错误集合：线上安全基本原则](Fundamentals/BasicOfTheBasics.md)
 
 - [从可信的来源安装软件]()
 	- [[Android] F-Droid]()
