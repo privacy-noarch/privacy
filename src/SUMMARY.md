@@ -7,6 +7,7 @@
 [前言]()
 
 - [在开始前]()
+	- [常见错误集合：线上安全基本原则](Fundamentals/BasicOfTheBasics.md)
 
 - [从可信的来源安装软件]()
 	- [[Android] F-Droid]()
@@ -22,10 +23,10 @@
 	- [[Android] 禁止输入法联网](Input/NoNetworkAccess/NoNetworkAccess.md)
 	- [**同文输入法 (TRIME) ^**]()
 	
-- [帐号安全：保护，隔离，整理]()
-	- [让密码管理器帮你记住密码]()
+- [帐号安全：保护，隔离，整理](Passwords/Passwords.md)
+	- [让密码管理器帮你记住密码](Passwords/PasswordManagers.md)
 		- [[Android] Bitwarden]()
-		- [[Desktop/All] Bitwarden]()
+		- [[Web] Bitwarden](Passwords/BitwardenWeb/BitwardenWeb.md)
 		- [**[Desktop/All] KeePassXC ^**]()
 	- [二步验证 - 增强帐号安全]()
 		- [[Android] andOTP]()
@@ -42,7 +43,7 @@
 		- [**Tor ^**]()
 
 - [在享受自由言论之前：“分裂人格”的魅力]()
-	- [[转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法](Identities/iYP:DID/iYP:DID.md)
+	- [[转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法](Identities/iYP_DID/iYP_DID.md)
 	- [[转载] 一个网友的“个人网络身份整改方案”](Identities/WIM-IDImplementation/WIM.md)
 
 - [在网络围墙外社交]()
@@ -63,7 +64,7 @@
 
 
 - [加密，加密一切](Encryption/Encryption.md)
-	- [公钥加密简介](Encryption/Pubkey/Pubkey.md)
+	- [[翻译] 公钥加密简介](Encryption/Pubkey/Pubkey.md)
 	- [[Android] PGP: OpenKeychain](Encryption/OpenKeychain/OpenKeychain.md)
 
 - [**Android 玩机技巧 ^**]()
