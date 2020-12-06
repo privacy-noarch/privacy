@@ -186,8 +186,3 @@ $ mogrify -format webp -define webp:lossless=true *.png && rm *.png && mogrify -
 ### 还有疑问？
 
 别犹豫，去 `privacy.noarch` 的 [Telegram 群组](https://t.me/chat_privacy_noarch)提问！
-
----
-
-创建：2020-10-07, *noarch*  
-最后修改：2020-11-21, *noarch*

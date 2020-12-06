@@ -56,8 +56,3 @@ CloudFlare 也被指控对 Tor 用户不友好。*noarch* 本人是 Tor 的重�
 ## 鸣谢
 
 [<i class="fa fa-git" aria-hidden="true"></i>](https://git-scm.com/) | [<i class="fa fa-book" aria-hidden="true"></i> mdBook](https://github.com/rust-lang/mdBook) | [<i class="fa fa-font-awesome" aria-hidden="true"></i> Font Awesome](https://fontawesome.com/) | *为线上隐私作出贡献的你*
-
----
-
-创建：2020-10-05, *noarch*  
-最后修改：2020-11-22, *noarch*

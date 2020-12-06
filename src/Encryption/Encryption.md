@@ -137,8 +137,3 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 	- LUKS 在各个平台上的实现
 		- Android: [EDS Lite]()
 		- GNU/Linux: [DM-Crypt + Cryptsetup]()
-
----
-
-创建：2020-11-18, *noarch*  
-最后修改：2020-11-21, *noarch*

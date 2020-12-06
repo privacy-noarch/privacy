@@ -77,8 +77,3 @@
 *noarch* 没有叫你记住你使用的上千个服务的不同密码。事实上，你只需要记住一两个 - 大多数情况下只有一个 - 密码就行了。
 
 要做到只记一个密码，却能保证所有帐号安全，你需要用到[密码管理器](https://en.wikipedia.org/wiki/Password_manager)。*noarch* 会在[下一篇文章](PasswordManagers.md)介绍密码管理器如何工作。
-
----
-
-创建：*noarch*, 2020-11-26  
-最后修改：*noarch*, 2020-11-28

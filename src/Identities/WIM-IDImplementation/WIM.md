@@ -180,6 +180,3 @@ E, 多系统 / 虚拟机，选用防窥膜，[**使用密码管理器**](https:/
 [原文](https://t.me/CWorldisMine/138)使用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.zh-Hans) 许可协议发布。
 
 `privacy.noarch` 与 [<i class="fa fa-telegram" aria-hidden="true"></i> @WorldisMineTelegram](https://t.me/WorldisMineTelegram) 并无隶属关系。
-
-创建：2020-11-22, *noarch*  
-最后修改：2020-11-22, *noarch*

@@ -494,6 +494,3 @@ Tails，Whonix 和 Qubes OS 之间的比较如下：
 [原文](https://www.iyouport.org/%e5%88%86%e8%a3%82%e4%ba%ba%e6%a0%bc%e7%9a%84%e9%ad%85%e5%8a%9b/) 使用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可协议发布。
 
 `privacy.noarch` 与 [iYouPort](https://www.iyouport.org/) 并无隶属关系。
-
-创建：2020-11-22, *noarch*  
-最后修改：2020-11-22, *noarch*

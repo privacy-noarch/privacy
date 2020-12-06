@@ -227,8 +227,3 @@ Bromite 自带广告拦截功能，并且**广告拦截功能默认开启。**
 > <i class="fa fa-check-circle" aria-hidden="true"></i> 彩蛋：如果你在 Bromite 或 Chrome 打开了超过 99 个标签页，它依然会保持微笑！
 
 ![bromite-99plustabs](images/bromite-99plustabs.webp)
-
----
-
-创建： 2020-08-11, *noarch*  
-最后修改： 2020-10-05, *noarch*
