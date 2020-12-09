@@ -26,7 +26,8 @@
         {{#if favicon_png}}
         <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">
         {{/if}}
-        <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
+        <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ path_to_root }}css/variables.css"></noscript>
         <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
         <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
         {{#if print_enable}}
@@ -34,19 +35,40 @@
         {{/if}}
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
+        <link rel="preload" href="{{ path_to_root }}FontAwesome/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css"></noscript>
         {{#if copy_fonts}}
         <link rel="stylesheet" href="{{ path_to_root }}fonts/fonts.css">
         {{/if}}
 
+        <!-- prevent incorrect font substitution -->
+        <style type="text/css">
+        html {
+            font-family: "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", sans-serif;
+            color: var(--fg);
+            background-color: var(--bg);
+            text-size-adjust: none;
+        }
+        code {
+            font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", monospace, monospace !important;
+            font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+        }
+        </style>
+
         <!-- Highlight.js Stylesheets -->
+        <link rel="preload" href="{{ path_to_root }}highlight.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="{{ path_to_root }}tomorrow-night.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="{{ path_to_root }}ayu-highlight.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
         <link rel="stylesheet" href="{{ path_to_root }}tomorrow-night.css">
         <link rel="stylesheet" href="{{ path_to_root }}ayu-highlight.css">
+        </noscript>
 
         <!-- Custom theme stylesheets -->
         {{#each additional_css}}
-        <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
+        <link rel="preload" href="{{ ../path_to_root }}{{ this }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}"></noscript>
         {{/each}}
 
         {{#if mathjax_support}}

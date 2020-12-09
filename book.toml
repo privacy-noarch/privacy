@@ -10,7 +10,7 @@ title = "privacy.noarch"
 preferred-dark-theme = "light"
 
 # add custom TOC, fonts, and unsafe browser detection
-additional-css = ["sidebar.css", "fonts.css", "unsafeBrowserBanner.css"]
+additional-css = ["sidebar.css", "unsafeBrowserBanner.css"]
 additional-js = ["sidebar.js", "browserDetection.js", "unsafeBrowserBanner.js"]
 
 # do not use webfonts other than FA, speeds up loading and saves bandwidth
