@@ -4,6 +4,7 @@ language = "zh-Hans"
 multilingual = false
 src = "src"
 title = "privacy.noarch"
+description = "一本面向新手的隐私教程"
 
 [output.html]
 # disable automatic dark theme to not break images
