@@ -19,3 +19,6 @@ copy-fonts = false
 # link to repository
 git-repository-url = "https://git.n0ar.ch/privacy"
 git-repository-icon = "fa-git"
+
+[output.html.print]
+enable = false
