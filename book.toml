@@ -11,8 +11,8 @@ description = "一本面向新手的隐私教程"
 preferred-dark-theme = "light"
 
 # add custom TOC, fonts, and unsafe browser detection
-additional-css = ["sidebar.css", "unsafeBrowserBanner.css"]
-additional-js = ["sidebar.js", "browserDetection.js", "unsafeBrowserBanner.js"]
+additional-css = ["sidebar.css"]
+additional-js = ["sidebar.js"]
 
 # do not use webfonts other than FA, speeds up loading and saves bandwidth
 copy-fonts = false
