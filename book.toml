@@ -23,3 +23,6 @@ git-repository-icon = "fa-git"
 
 [output.html.print]
 enable = false
+
+[output.html.search]
+enable = false
