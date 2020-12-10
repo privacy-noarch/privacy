@@ -26,7 +26,7 @@
         {{#if favicon_png}}
         <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">
         {{/if}}
-        <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="{{ path_to_root }}css/variables.css" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="{{ path_to_root }}css/variables.css"></noscript>
         <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
         <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
@@ -35,7 +35,8 @@
         {{/if}}
 
         <!-- Fonts -->
-        <link rel="preload" href="{{ path_to_root }}FontAwesome/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="{{ path_to_root }}FontAwesome/css/font-awesome.css" as="style">
+        <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css"></noscript>
         {{#if copy_fonts}}
         <link rel="stylesheet" href="{{ path_to_root }}fonts/fonts.css">
@@ -56,9 +57,9 @@
         </style>
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="preload" href="{{ path_to_root }}highlight.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="{{ path_to_root }}tomorrow-night.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="{{ path_to_root }}ayu-highlight.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="{{ path_to_root }}highlight.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ path_to_root }}tomorrow-night.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ path_to_root }}ayu-highlight.css" media="print" onload="this.media='all'">
         <noscript>
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
         <link rel="stylesheet" href="{{ path_to_root }}tomorrow-night.css">
@@ -67,7 +68,7 @@
 
         <!-- Custom theme stylesheets -->
         {{#each additional_css}}
-        <link rel="preload" href="{{ ../path_to_root }}{{ this }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}"></noscript>
         {{/each}}
 
