@@ -156,10 +156,6 @@ $ mogrify -format webp -define webp:lossless=true *.png && rm *.png && mogrify -
 
 不过，如果你为 `privacy.noarch` 翻译了英文版维基百科的条目，请把它贡献回中文版维基百科的对应条目，让它们在艰难的环境下也能成长！
 
-#### 引用来源的安全性
-
-请尽量不要引用一些充满追踪器或广告的网页。如果实在需要，你可以使用 [WaybackMachine](https://archive.org/web/web.php) 打个快照然后引用快照。
-
 ### 还有疑问？
 
 别犹豫，去 `privacy.noarch` 的 [Telegram 群组](https://t.me/chat_privacy_noarch)提问！
