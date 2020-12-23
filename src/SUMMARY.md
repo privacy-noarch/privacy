@@ -34,8 +34,6 @@
 
 - [突破网络长城](WallBreak/WallBreak.md)
 	- [代理提供商]()
-		- [蓝灯 (Lantern)]()
-		- [赛风 (Psiphon)]()
 	- [**代理工具 ^**]()
 		- [V2Ray]()
 		- [Trojan]()
