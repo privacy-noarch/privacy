@@ -7,7 +7,7 @@
 Bitwarden 不怎么特别，但它拥有一个密码管理器应有的所有安全性和功能。It just Works.
 
 开发者：Bitwarden, Inc. | [官方网站](https://bitwarden.com) | [源代码](https://bitwarden.com/open-source/)  
-服务端 [AGPL](https://github.com/bitwarden/server/blob/master/LICENSE_AGPL.txt) 和 [Bitwarden EULA](https://github.com/bitwarden/server/blob/master/LICENSE_BITWARDEN.txt), 客户端 [GPL](https://github.com/bitwarden/browser/blob/master/LICENSE.txt) | [服务条款](https://bitwarden.com/terms/) | [隐私政策](https://bitwarden.com/privacy/)
+客户端 [GPLv3](https://github.com/bitwarden/browser/blob/master/LICENSE.txt), 服务端 [AGPLv3](https://github.com/bitwarden/server/blob/master/LICENSE_AGPL.txt) 和 [Bitwarden EULA](https://github.com/bitwarden/server/blob/master/LICENSE_BITWARDEN.txt) | [服务条款](https://bitwarden.com/terms/) | [隐私政策](https://bitwarden.com/privacy/)
 
 ---
 
