@@ -10,7 +10,8 @@ description = "一本面向新手的隐私教程"
 # disable automatic dark theme to not break images
 preferred-dark-theme = "light"
 
-# add custom TOC, fonts, and unsafe browser detection
+# add a custom TOC from
+# https://github.com/JorelAli/mdBook-pagetoc
 additional-css = ["sidebar.css"]
 additional-js = ["sidebar.js"]
 
