@@ -19,8 +19,8 @@ additional-js = ["sidebar.js"]
 copy-fonts = false
 
 # link to repository
-git-repository-url = "https://git.n0ar.ch/privacy"
-git-repository-icon = "fa-git"
+git-repository-url = "https://github.com/noarchwastaken/privacy"
+git-repository-icon = "fa-github"
 
 [output.html.print]
 enable = false
