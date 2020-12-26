@@ -1,2 +1,2 @@
-# Linguist overrides
-*.md linguist-detectable=true
+# Markdown: LF line endings, detectable by GitHub Linguist
+*.md	text eol=lf linguist-detectable=true
