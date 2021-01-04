@@ -47,7 +47,7 @@ CloudFlare 也被指控对 Tor 用户不友好。*noarch* 本人是 Tor 的重�
 
 ![CC BY-SA](images/by-sa.svg)
 
-© 2020 `privacy.noarch` project.
+© 2020-2021 `privacy.noarch` project.
 
 除非特别注明，本书及其所有原创媒体均使用 [知识共享 署名-相同方式共享 4.0 国际 **(CC BY-SA 4.0)**](https://creativecommons.org/licenses/by-sa/4.0/legalcode.zh-Hans) 许可发布。
 
