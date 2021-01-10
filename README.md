@@ -17,6 +17,14 @@ noarch, 或写作 *.noarch*
 - 写代码很菜
 - i3-wm on Debian testing
 	- 所以我为什么叫 noarch 呢
+	
+armFusion (aka. *\_armFusion\**)
+
+- 中国高中生
+- 5年 MacBook Pro 使用者, (主要写macOS相关)
+- C++ 绝赞学习中
+- ~~隐私保护方面仍然追随着 *noarch* 前辈的脚步~~
+
 
 ## 网址
 
