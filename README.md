@@ -25,7 +25,6 @@ armFusion (aka. *\_armFusion\**)
 - C++ 绝赞学习中
 - ~~隐私保护方面仍然追随着 *noarch* 前辈的脚步~~
 
-
 ## 网址
 
 明网：[https://privacy.n0ar.ch](https://privacy.n0ar.ch)
