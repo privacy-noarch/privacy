@@ -46,7 +46,7 @@
 - [在网络围墙外社交]()
 	- [中心化]()
 		- [[All] Telegram]()
-		- [[Android/iOS] Signal]()
+		- [[Android/iOS] Signal](RTC/Signal/Signal.md)
 	- [**去中心化 ^**]()
 		- [[Android/iOS] Matrix/Element]()
 		- [[Web] Matrix/Element]()
