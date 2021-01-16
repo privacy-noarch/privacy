@@ -75,68 +75,15 @@
 
 在虚拟磁盘里安装 Windows 就像在虚拟机里安装 Windows. 首先你需要准备一个 `iso` 格式的 Windows 安装镜像。
 
-在此之前你可能知道微软的“媒体创建工具”，在一般情况下你可以用它来创建安装镜像：
+你可以通过多种方法向微软获得 Windows 安装镜像，例如“媒体创建工具”：
 
 ![windows-image-creation-tool](images/windows-image-creation-tool.webp)
 
-不过我们的情况**不能用这个工具创建镜像。** 与在虚拟机里安装 Windows 不同，我们要跳过微软“官方”的安装程序，直接将 Windows “解压”到目标虚拟磁盘。该工具创建的镜像以一种新的格式包装，不能直接被“解压”。
-
-因此，你需要获取一个特殊的镜像；它内部所包含的 Windows 使用 `WinImage` 格式包装。
-
-访问 [https://www.microsoft.com/zh-cn/software-download/windows10ISO](https://www.microsoft.com/zh-cn/software-download/windows10ISO), “正常情况下”你会被重定向到上述媒体创建工具的页面：
-
-![windows10iso-redirect](images/windows10iso-redirect.webp)
-
-然而 *noarch* 在运行 Linux 的电脑上访问是这样的：
+或者只为非 Windows 电脑开放的直接 `iso` 下载。
 
 ![windows10iso-actual](images/windows10iso-actual.webp)
 
-要访问到真正的 `iso` 下载页面，你需要修改浏览器 [User-Agent](https://zh.wikipedia.org/wiki/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86), 假装自己是一个无法运行“媒体创建工具”的非 Windows 电脑。
-
-首先准备一个 Chromium 或 Firefox 内核的浏览器；*noarch* 将使用 Chrome 作为示范。
-
-安装一个用于修改 User-Agent 的插件， *noarch* 在此以 "User-Agent Switcher and Manager" 为例：
-- Firefox: [https://addons.mozilla.org/zh-CN/firefox/addon/user-agent-string-switcher/](https://addons.mozilla.org/zh-CN/firefox/addon/user-agent-string-switcher/)
-- Chrome: [https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg](https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg)
-
-安装完成后你可以在浏览器右上角的“扩展程序”里找到它。
-
-![chrome-extensions](images/chrome-extensions.webp)
-
-在“扩展程序”里点击它可以打开它的主界面。
-
-![ua-switcher-home](images/ua-switcher-home.webp)
-
-在顶部的第二个下拉菜单，选择 "Linux":
-
-![ua-switcher-dropdown](images/ua-switcher-dropdown.webp)
-
-然后选中列表的第一项，点击 "Apply (active window)". 这个插件的图标应该会变成彩色，并带有文字标签 "Lin":
-
-![ua-switcher-linux-applied](images/ua-switcher-linux-applied.webp)
-
-现在你可以再次访问 [https://www.microsoft.com/zh-cn/software-download/windows10ISO](https://www.microsoft.com/zh-cn/software-download/windows10ISO), 然后看到 `iso` 的下载页面了。
-
-![windows10iso-actual-chrome](images/windows10iso-actual-chrome.webp)
-
-向下滑动，选择版本和语言；
-
-![windows10iso-edition-select](images/windows10iso-edition-select.webp)  
-![windows10iso-language-select-dropdown](images/windows10iso-language-select-dropdown.webp)
-
-然后点击“确认”来获取下载链接。
-
-![windows10iso-download](images/windows10iso-download.webp)
-
-根据你的 PC 配置，你可以选择 64-bit 或 32-bit 下载；在大多数情况下 (2020 年) 你应该选择 64-bit.
-
-~~坐和放宽~~ ... 因为微软在中国有设立 CDN, 但愿你的下载速度可以接受。
-
-下载完后你就可以在平时的下载文件夹找到这个 `iso` 文件。
-
-<img alt=windows10iso-properties src=images/windows10iso-properties.webp width=450>
-
-你可以在等待下载的同时进行下一步。
+这两种方式 *noarch* 就不在此赘述；你可以在等待下载的同时进行下一步。
 
 ## 创建虚拟磁盘文件
 
@@ -203,7 +150,13 @@
 
 ![windows-iso-mounted](images/windows-iso-mounted.webp)
 
-你可以右击然后“打开”（不是“从媒体安装或运行程序”）刚刚装载的 `iso` 镜像，在装载的“光盘”里找到 `sources\install.wim`. 这就是我们接下来要“盘”的“盘”：
+你可以右击然后“打开”（不是“从媒体安装或运行程序”）刚刚装载的 `iso` 镜像。
+
+如果你是直接下载的 `iso`, 你可以在装载的“光盘”里找到 `sources\install.wim`.
+
+> <i class="fa fa-info-circle" aria-hidden="true"></i> 如果你是使用“媒体创建工具”创建的 `iso`, 这个文件则会是 `install.esd` 而不是 `install.wim`.
+>
+> 如果你的是 `install.esd`, 请将下面所有命令中 `install.wim` 替换成 `install.esd`.
 
 <img alt=install-wim src=images/install-wim.webp width=450>
 
