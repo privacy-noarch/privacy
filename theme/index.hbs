@@ -47,20 +47,6 @@
         <link rel="stylesheet" href="{{ path_to_root }}fonts/fonts.css">
         {{/if}}
 
-        <!-- prevent incorrect font substitution -->
-        <style type="text/css">
-        html {
-            font-family: "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", sans-serif;
-            color: var(--fg);
-            background-color: var(--bg);
-            text-size-adjust: none;
-        }
-        code {
-            font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", "PingFangSC-Regular", monospace, monospace !important;
-            font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
-        }
-        </style>
-
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="{{ path_to_root }}tomorrow-night.css" media="print" onload="this.media='all'">
