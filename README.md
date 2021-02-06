@@ -52,4 +52,4 @@ Onion v3: [http://fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion
 - 注明出处
 - 允许他人使用相同许可证 (GNU 自由文档许可证) 转载
 - 如果进行了修改，请取一个不同的名字
-- 除私用以外，不使用任何技术手段 (DRM) 防止未来的拷贝
+- 不使用任何技术手段 (DRM) 防止未来的拷贝
