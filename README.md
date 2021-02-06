@@ -41,8 +41,15 @@ Onion v3: [http://fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion
 
 ## 版权相关
 
-![CC BY-SA](src/images/by-sa.svg)
+![GFDL](src/images/gfdl-logo.svg)
 
 © 2020-2021 `privacy.noarch` project.
 
-除非特别注明，本书及其所有原创媒体均使用 [知识共享 署名-相同方式共享 4.0 国际 **(CC BY-SA 4.0)**](https://creativecommons.org/licenses/by-sa/4.0/legalcode.zh-Hans) 许可发布。
+除非特别注明，本书及其所有原创媒体均使用 [GNU 自由文档许可证](https://www.gnu.org/licenses/fdl-1.3.html) 许可发布。
+
+简单来说，请在转载时：
+
+- 注明出处
+- 允许他人使用相同许可证 (GNU 自由文档许可证) 转载
+- 如果进行了修改，请取一个不同的名字
+- 除私用以外，不使用任何技术手段 (DRM) 防止未来的拷贝
