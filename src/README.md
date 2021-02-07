@@ -27,22 +27,21 @@ armFusion (aka. *\_armFusion\**)
 - C++ 绝赞学习中
 - ~~隐私保护方面仍然追随着 *noarch* 前辈的脚步~~
 
-## 洋葱站点
+## 各种阅读姿势
 
-> Please excuse my anonymity.  
-> 感谢你理解我的匿名性。
+> <i class="fas fa-info-circle"></i> `privacy.noarch` 明网版本使用 Cloudflare CDN. 请尽可能访问下述 Onion v3 站点，支持去中心化和隐私的互联网。
 
-细心的你可能注意到了 `privacy.noarch` 的主站 [privacy.n0ar.ch](https://privacy.n0ar.ch) 使用 CloudFlare 来保护 *noarch* 服务器的地址和阻挡 DDoS 攻击。
+明网：
 
-如果你对隐私足够偏执，你应该知道 CloudFlare 在保护 **访问者** 隐私上的[声誉并不好](https://github.com/privacytools/privacytools.io/issues/374#issuecomment-460077544)。最重要的是，CloudFlare 恐通过其免费服务**将原本去中心化的互联网变成 CloudFlare 专属的网络。**
+<pre><code><a href="https://privacy.n0ar.ch/">https://privacy.n0ar.ch/</a></code></pre>
 
-CloudFlare 也被指控对 Tor 用户不友好。*noarch* 本人是 Tor 的重度用户，经常为面对 CloudFlare 的验证码而烦恼；同样 *noarch* 也不希望互联网被 CloudFlare 垄断。
+Onion v3：
 
-如果可以，请尽量使用下方的洋葱站点地址访问本书，为毛绒绒，去中心化和隐私的互联网作出贡献：
+<pre><code><a href="http://fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion/">http://fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion/</a></code></pre>
 
-<pre><code><a href="http://fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion/">http://<strong>fluffy</strong>vv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion/</a></code></pre>
+你也可以[在 GitHub 直接进入 `src` 阅读](https://github.com/noarchwastaken/privacy/tree/master/src)；但是为了最佳体验（例如显示 Font Awesome），请访问上述 [mdBook](https://github.com/rust-lang/mdBook) 生成的网页版。
 
-*noarch* 同时还将此地址添加到了 `Onion-Location` HTTP header, 如果你使用 Tor Browser 浏览本书可以直接跳转。
+在网页版里，你可以点击右上角的“简”和“繁”来切换简体和台湾繁体。台湾繁体版使用 [OpenCC](https://github.com/BYVoid/OpenCC) 转换。
 
 ## 来贡献和摸鱼！
 
