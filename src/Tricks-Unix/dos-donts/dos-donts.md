@@ -147,7 +147,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 ## *最好：* 阅读 man pages
 
-说起 man pages, 它是学习类 Unix 系统的最好方法：软件的官方文档通常就被打包为 man pages.
+说起 man pages, 它是学习类 Unix 系统的最好方法：软件的官方文档通常就被打包为 man pages - 文档页。
 
 例如，*noarch* 要为自己搭建一个 `cgit` 可视化，而我不知道如何配置 `cgitrc` (`cgit` 的配置文件)。
 
