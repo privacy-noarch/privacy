@@ -75,6 +75,9 @@
 - [**Windows 玩机技巧 ^**]()
 	- [**使用 VHD(X) 部署原生多系统 ^**](Tricks-Windows/VHD/VHD.md)
 
+- [**类 Unix 玩机技巧 ^**]()
+	- [网上教程不会告诉你的类 Unix 使用注意事项](Tricks-Unix/dos-donts/dos-donts.md)
+
 [后记]()
 
 [反馈与贡献](CONTRIBUTING.md)
