@@ -48,9 +48,40 @@ $ curl https://lorem.ipsum/dolor.sh | sudo bash
 
 这让你的网站暴露于 TLS 降级攻击：一个过度简单的描述就是中间人攻击者拦截客户端开始 HTTPS 通讯的请求，使得客户端只使用 HTTP 访问你的网站。攻击者再可以由此窃取你用户的帐号密码，修改你网站的内容...
 
-除了安全问题之外，忽略细节需要牺牲性能：因为[安全问题](https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/)，众多发行版的 Nginx 安装都默认禁用 Gzip 压缩。这回让你的用户和服务器浪费许多宝贵的流量，并降低加载速度。如果你手动配置 Nginx 并愿意了解更多技术细节，你就可以专门为静态资源 (CSS, JS...) 启用 Gzip.
+除了安全问题之外，忽略细节需要牺牲性能：因为[安全问题](https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/)，众多发行版的 Nginx 安装都默认禁用 Gzip 压缩。这会让你的用户和服务器浪费许多宝贵的流量，并降低加载速度。如果你手动配置 Nginx 并愿意了解更多技术细节，你就可以专门为静态资源 (CSS, JS...) 启用 Gzip.
 
 Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com/gzip-vs-bzip2-vs-xz-performance-comparison/)！
+
+
+## *不：* 复制粘贴进 shell
+
+你在浏览器内复制的东西不永远是你想的那样。
+
+网站可以用 Javascript [劫持你的剪贴板](https://briantracy.xyz/writing/copy-paste-shell.html)，让你复制与你选择时完全不同的内容。
+
+并且，你在粘贴时，甚至不需要手动按回车执行指令：在大多数默认情况下，恶意剪贴板劫持内的一个换行字符就足以让命令在你粘贴时就运行。
+
+即使你是 [`oh-my-zsh`](https://ohmyz.sh/) 的用户，启用了 [bracked pasting](https://cirw.in/blog/bracketed-paste), 恶意代码也可以通过包含 bracketed pasting 字符来逃逸这个功能，就像众多 SQL injection 一样。
+
+一些终端模拟器，例如 iTerm2, `gnome-terminal` 和 `Terminal.app` 会自动将 bracket 字符转义，这样你相对不怎么需要担心最后一点。
+
+### 粘贴进 `vim` 也不安全
+
+你可能以为 Vim 只是一个文本编辑器，你在其中粘贴内容是安全的；
+
+但恶意代码还可以利用 Vim 的宏功能执行命令。[这是另一个 Demo](https://github.com/dxa4481/Pastejacking), 以及一些应对措施。
+
+### 那我如何科学复制粘贴？
+
+最好的方案 - 不要复制粘贴互联网上的内容到 Shell 等允许执行指令的地方。
+
+如果你实在要粘贴，一个更基本的文本编辑器，例如 `gedit` 可能适合你的需求。
+
+如果你愿意接受一些代价，你也可以禁用浏览器的 Javascript 复制粘贴功能：
+
+以 Firefox 或 Tor 浏览器为例，去 `about:config` 里禁用 `dom.allow_cut_copy`.
+
+这会阻止所有 Javascript 引起的复制粘贴行为，意味着例如 Google Docs 以及 mdBook `clipboard.js` 这些对 Javascript 剪贴板的合法应用将会失效。
 
 
 ## *不：* 安装野包
@@ -127,7 +158,17 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 在不利用任何 0day 的情况下，攻击者只需要找出你的 aria2 RPC 密钥（你为了方便，它多半是一个弱密码），然后下载他的 ssh 公钥到 `/root/.ssh/authorized_keys`, 这台机器就是他的了。
 
-*noarch* 推荐的使用方法是为 `aria2c` 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 `systemd` 服务，指定运行时的用户和组，或者使用 `nobody`.
+*noarch* 推荐的使用方法是为 `aria2c` 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 `systemd` 服务，指定运行时的用户和组，或者使用 `systemd` 的[动态用户](https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=)功能。
+
+### *不：* `nobody` 运行服务
+
+> <i class="fas fa-check-circle"></i> 感谢 [@Karuboniru](https://t.me/karuboniru) 的勘误！
+
+你可能觉得，系统里最低权限的用户是 `nobody`, 也确实有很多教程叫你把服务在 `nobody` 下运行。*那么以后低权限的进程都用 `nobody`?*
+
+很抱歉，这是一个误导。*noarch* 在[本章第一版](https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a)时也犯了这个错误。
+
+使用 `nobody` 运行服务，会使你的服务意外获得其它在 `nobody` 下的资源。`nobody` 还被 Linux 内核[用来映射无法映射到当前命名空间内的 UID](https://fedoraproject.org/wiki/Changes/RenameNobodyUser), 例如 NFS 使用的 32 位 UID.
 
 
 ## *不：* 盲目跟随“教程”
@@ -138,7 +179,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 刚看完上一节[不安装野包](#不-安装野包)，你应该意识到上图的行为像是自杀。它将 `rpm` 包强行安装在基于 Debian 的发行版上，后果可想而知...
 
-包括 *noarch* 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。
+包括 *noarch* 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节[不 `nobody` 运行服务]()！）
 
 盲目跟随这些教程可能使你陷入死胡同，使用一个已经被抛弃的配置，例如在 Nginx 上启用 SSLv3. （永远别尝试在生产环境上这么做！）
 
