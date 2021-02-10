@@ -71,7 +71,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 但恶意代码还可以利用 Vim 的宏功能执行命令。[这是另一个 Demo](https://github.com/dxa4481/Pastejacking), 以及一些应对措施。
 
-### 那我如何科学复制粘贴？
+### 那我如何科学地复制粘贴？
 
 最好的方案 - 不要复制粘贴互联网上的内容到 Shell 等允许执行指令的地方。
 
