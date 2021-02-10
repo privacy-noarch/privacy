@@ -8,7 +8,7 @@
 }
 
 html {
-    font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI", sans-serif;
+    font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans SC", "Segoe UI", "Microsoft YaHei UI", sans-serif;
     color: var(--fg);
     background-color: var(--bg);
     text-size-adjust: none;
