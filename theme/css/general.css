@@ -21,7 +21,7 @@ body {
 }
 
 code {
-    font-family: "Ubuntu Mono", "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, monospace, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI";
+    font-family: "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, monospace, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI";
     font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
 }
 
