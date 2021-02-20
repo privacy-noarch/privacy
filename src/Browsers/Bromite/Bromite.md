@@ -14,7 +14,7 @@ Bromite - 你的浏览器应该由你掌控。
 
 ## 简介
 
-当你看到上面的描述时，你可能会疑问：“*Chromium 是什么？我为什么从来都没有听说有人用过 Chromium? ”*
+当你看到上面的描述时，你可能会疑问：*“Chromium 是什么？我为什么从来都没有听说有人用过 Chromium? ”*
 
 我们来换种方式描述 Chromium 吧，一句话来说：Chromium 是 Google Chrome（谷歌浏览器）的**母项目**。Google 在维护 Chromium 这个开源项目的同时，会将它的源代码进行修改，并且贴上不同的商标发行。在功能和使用上，两个浏览器几乎相同。
 
@@ -62,7 +62,7 @@ Bromite - 你的浏览器应该由你掌控。
 
 要为你正在使用的设备下载和安装 Bromite ，选中**绿色高亮**的 "Architecture"，然后**点击 "Download Bromite ..."**
 
-你的浏览器可能会询问是否保留该文件，**点击”确定“**。下载完成后，**点击”打开“来安装**。
+你的浏览器可能会询问是否保留该文件，**点击“确定”**。下载完成后，**点击“打开”来安装**。
 
 > <i class="fa fa-info-circle" aria-hidden="true"></i> 假如你之前没有从目前使用的浏览器安装过应用，你需要进行一个额外的步骤允许应用安装。下面的视频展示了 Bromite 的安装以及允许未知来源应用的步骤。
 
@@ -102,7 +102,7 @@ F-Droid 的官方仓库并没有提供 Bromite，但是 Bromite Project 提供�
 
 <img alt="bromite-fdroid-repo-qr" src="images/bromite-fdroid-repo-qr.webp" height=200> *[来源](https://www.bromite.org/fdroid)*
 
-**复制链接之后**，**打开 F-Droid 客户端，点击底栏的“设置”**进入设置界面。在设置界面，**点击“存储库”**：
+**复制链接之后**， **打开 F-Droid 客户端，点击底栏的“设置”** 进入设置界面。在设置界面，**点击“存储库”**：
 
 <img alt="fdroid-settings" src="images/fdroid-settings.webp" width=450>
 
@@ -138,7 +138,7 @@ F-Droid 的官方仓库并没有提供 Bromite，但是 Bromite Project 提供�
 
 [中国联通](https://www.zhihu.com/question/23197534)、[Comcast](https://www.privateinternetaccess.com/blog/comcast-still-uses-mitm-javascript-injection-serve-unwanted-ads-messages/) 等网络运营商被证实进行过多种中间人攻击；使用运营商提供的 DNS 存在被 [DNS 污染](https://en.wikipedia.org/wiki/DNS_spoofing)的风险。根据政府要求，中国所有网络运营商提供的 DNS 都被污染以配合[防火长城](https://en.wikipedia.org/wiki/Great_Firewall)的运作。未来不排除网络运营商通过中间人攻击进行 DNS 劫持（即便使用了未被污染的 DNS 服务器，查询结果也因为中间人攻击而被污染）的可能。
 
-[**DNS over HTTPS**](https://en.wikipedia.org/wiki/DNS_over_HTTPS) 是一个将 [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) 请求进行加密的方案。其意义在于**将 DNS 请求使用 [HTTPS](https://en.wikipedia.org/wiki/HTTPS) 协议加密，来防止可能的[中间人攻击](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)**污染 DNS 查询结果。通过在浏览器内使用 DNS over HTTPS, 你可以指定一个 DNS 服务器列表并且与它们进行加密的 DNS 查询。
+[**DNS over HTTPS**](https://en.wikipedia.org/wiki/DNS_over_HTTPS) 是一个将 [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) 请求进行加密的方案。其意义在于 **将 DNS 请求使用 [HTTPS](https://en.wikipedia.org/wiki/HTTPS) 协议加密，来防止可能的[中间人攻击](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)** 污染 DNS 查询结果。通过在浏览器内使用 DNS over HTTPS, 你可以指定一个 DNS 服务器列表并且与它们进行加密的 DNS 查询。
 
 > <i class="fa fa-info-circle" aria-hidden="true"></i> 下述 DoH 为 DNS over HTTPS 的简称。
 
