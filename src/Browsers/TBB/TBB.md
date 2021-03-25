@@ -72,9 +72,9 @@ Tor 会将你的流量通过随机选择的三个服务器加密并转发；其�
 
 ## 安全性等级
 
-安全性等级是 Tor Browser 中的一个实用功能；你可以用它方便的关闭可能会泄漏你的隐私的两大网站特性：资源和 JavaScript。
+安全性等级是 Tor Browser 中的一个实用功能；你可以用它方便的关闭可能会泄漏你的隐私的两大网站特性：媒体资源（图片等）和 JavaScript。
 
-> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 有许多网站依赖这两项特性（尤其是 JavaScript）工作，所以**使用此设置可能会导致这些网站无法正常显示** - 请自行权衡。
+> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 有许多网站依赖这两项特性（尤其是 JavaScript）工作；大多数现代网站（比如 Twitter 和 Reddit）都在其页面上使用 JavaScript 实现了一些高级特性，所以**使用此设置可能会导致这些网站无法正常显示** - 请自行权衡。
 
 你可以在设置 - 安全性和隐私 （`about:preferences#privacy`）找到这个设置。它应该长这样：
 
@@ -83,12 +83,18 @@ Tor 会将你的流量通过随机选择的三个服务器加密并转发；其�
 三个选项从上到下分别为：
 
 > - 标准 - 保留所有网站特性。
->- 更安全 - 禁用如下的网站特性：
-> 
->  - （在非HTTPS网站上）禁用 JavaScript
+>
+> - 更安全 - 禁用如下的网站特性（可能会导致某些网站崩溃）：
+>
+>   - 禁用**非 HTTPS 来源**的 JavaScript（只允许 HTTPS 加密传输的 JavaScript 脚本运行），同时禁用一部分脚本功能（如 [WebAssembly](https://zh.wikipedia.org/wiki/WebAssembly) 和 [JIT](https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF)（有沙盒逃逸风险，是造成 2021 年初 Firefox 沙盒逃逸漏洞的主要原因））
 >   - 禁用一些字体和数学符号
 >   - 禁用 HTML5 媒体和 WebGL 的自动播放。
-> - 最安全 - 在 “更安全” 设置的基础上：
->  - 全局禁用 JavaScript
->   - 禁用外链图片
+>
+> - 最安全 - 这一模式默认只允许静态或纯文本网页必须的基本特性。在 “更安全” 设置的基础上：
+>
+>   - 全局禁用 JavaScript
+>
+>   - 禁用一些图片和图标
+> 	
 
+## 广告过滤插件
