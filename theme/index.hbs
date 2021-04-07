@@ -171,14 +171,19 @@
                         switch (window.location.hostname) {
                             case CN_CLEAR:
                                 window.location.hostname = TW_CLEAR;
+                                break;
                             case TW_CLEAR:
                                 window.location.hostname = CN_CLEAR;
+                                break;
                             case CN_TOR:
                                 window.location.hostname = TW_TOR;
+                                break;
                             case TW_TOR:
                                 window.location.hostname = CN_TOR;
+                                break;
                             default:
-                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.')
+                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
+                                break;
                         }
                         ">
                             <strong>简/繁</strong>
