@@ -1,26 +1,18 @@
 name: Deploy to Cloudflare pages
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Retrieve the latest mdBook release by noarchwastaken
@@ -49,4 +41,47 @@ jobs:
           source-directory: 'book'
           destination-github-username: 'noarchwastaken'
           destination-repository-name: 'privacy-pages'
+          user-email: notareal@email.com
+
+  build-tw:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Retrieve the latest mdBook release by noarchwastaken
+        run: |
+          wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7-noarchwastaken/mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+          tar -xvf mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+
+      - name: Update apt cache
+        run: sudo apt update -y
+
+      - name: Install BeautifulSoup for lazyimg.py
+        run: sudo apt install python3-bs4 -y
+
+      - name: Install OpenCC
+        run: sudo apt install opencc -y
+
+      - name: Patch the book for fonts and HTML language attribute
+        run: git apply utils/0001-traditional.patch
+
+      - name: Build the book
+        run: |
+          ./mdbook build
+
+      - name: Patch the output for lazy image loading
+        run: python3 utils/lazyimg.py book
+
+      - name: Convert the book to Traditional Chinese
+        run: sh utils/opencc.sh book
+
+      - name: Push the book to the CF pages repo
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'book'
+          destination-github-username: 'noarchwastaken'
+          destination-repository-name: 'privacy-pages-tw'
           user-email: notareal@email.com

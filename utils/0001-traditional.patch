@@ -1,0 +1,37 @@
+diff --git a/book.toml b/book.toml
+index 0eb1981..8febdd5 100644
+--- a/book.toml
++++ b/book.toml
+@@ -1,6 +1,6 @@
+ [book]
+ authors = ["noarch"]
+-language = "zh-Hans"
++language = "zh-Hant"
+ multilingual = false
+ src = "src"
+ title = "privacy.noarch"
+diff --git a/theme/css/general.css b/theme/css/general.css
+index 3b2ba23..da719af 100644
+--- a/theme/css/general.css
++++ b/theme/css/general.css
+@@ -8,7 +8,7 @@
+ }
+ 
+ html {
+-    font-family: "Noto Sans", "Noto Sans CJK SC", "Noto Sans SC", "Segoe UI", "Microsoft YaHei UI", sans-serif;
++    font-family: "Noto Sans", "Noto Sans CJK TC", "Noto Sans TC", "Segoe UI", "Microsoft JhengHei UI", sans-serif;
+     color: var(--fg);
+     background-color: var(--bg);
+     text-size-adjust: none;
+@@ -21,7 +21,7 @@ body {
+ }
+ 
+ code {
+-    font-family: "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, monospace, "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei UI";
++    font-family: "DejaVu Sans Mono", "Source Code Pro", Consolas, Menlo, monospace, "Noto Sans CJK TC", "Noto Sans TC", "Microsoft JhengHei UI";
+     font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+ }
+ 
+-- 
+2.31.1
+
