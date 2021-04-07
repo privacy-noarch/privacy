@@ -23,24 +23,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       - name: Retrieve the latest mdBook release by noarchwastaken
         run: |
           wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7-noarchwastaken/mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
           tar -xvf mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
 
+      - name: Install BeautifulSoup for lazyimg.py
+        run: sudo apt install python3-bs4 -y
+
       - name: Build the book
         run: |
           ./mdbook build
+
+      - name: Patch the output for lazy image loading
+        run: python3 utils/lazyimg.py book
 
       - name: Push the book to the CF pages repo
         uses: cpina/github-action-push-to-another-repository@master
@@ -49,5 +45,5 @@ jobs:
         with:
           source-directory: 'book'
           destination-github-username: 'noarchwastaken'
-          destination-repository-name: 'privacy-pages-test'
+          destination-repository-name: 'privacy-pages'
           user-email: notareal@email.com
