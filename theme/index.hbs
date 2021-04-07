@@ -159,11 +159,29 @@
                     <h1 class="menu-title">{{ book_title }}</h1>
 
                     <div class="right-buttons">
-                        <a href="?goto_cn" title="Switch to Traditional Chinese" aria-label="Switch to Traditional Chinese" class="icon-button">
-                            <strong>简</strong>
-                        </a>
-                        <a href="?goto_tw" title="Switch to Simplified Chinese" aria-label="Switch to Simplified Chinese" class="icon-button">
-                            <strong>繁</strong>
+                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
+                        "
+                        'use strict';
+
+                        const CN_CLEAR = 'privacy.n0ar.ch';
+                        const TW_CLEAR = 'privacy-tw.n0ar.ch';
+                        const CN_TOR = 'fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+                        const TW_TOR = 'tw.fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+
+                        switch (window.location.hostname) {
+                            case CN_CLEAR:
+                                window.location.hostname = TW_CLEAR;
+                            case TW_CLEAR:
+                                window.location.hostname = CN_CLEAR;
+                            case CN_TOR:
+                                window.location.hostname = TW_TOR;
+                            case TW_TOR:
+                                window.location.hostname = CN_TOR;
+                            default:
+                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.')
+                        }
+                        ">
+                            <strong>简/繁</strong>
                         </a>
                         {{#if print_enable}}
                         <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
