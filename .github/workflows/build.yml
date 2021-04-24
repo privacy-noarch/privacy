@@ -23,12 +23,11 @@ jobs:
       - name: Update apt cache
         run: sudo apt update -y
 
-      - name: Install BeautifulSoup for lazyimg.py
+      - name: Install dependencies
         run: sudo apt install python3-bs4 -y
 
       - name: Build the book
-        run: |
-          ./mdbook build
+        run: ./mdbook build
 
       - name: Patch the output for lazy image loading
         run: python3 utils/lazyimg.py book
@@ -57,18 +56,14 @@ jobs:
       - name: Update apt cache
         run: sudo apt update -y
 
-      - name: Install BeautifulSoup for lazyimg.py
-        run: sudo apt install python3-bs4 -y
-
-      - name: Install OpenCC
-        run: sudo apt install opencc -y
+      - name: Install dependencies
+        run: sudo apt install python3-bs4 opencc -y
 
       - name: Patch the book for fonts and HTML language attribute
         run: git apply utils/0001-traditional.patch
 
       - name: Build the book
-        run: |
-          ./mdbook build
+        run: ./mdbook build
 
       - name: Patch the output for lazy image loading
         run: python3 utils/lazyimg.py book
