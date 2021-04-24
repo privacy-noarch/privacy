@@ -407,7 +407,7 @@ PS C:\Windows\system32> bcdedit /set "{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}" de
 
 如果你要手动安装驱动，虚拟磁盘内的 Windows 在驱动安装上和直接在物理磁盘内安装基本无异。
 
-### 卸载 (unmount) 物理磁盘
+### 卸载 (unmount) 物理分区
 
 > <i class="fa fa-bomb" aria-hidden="true"></i> **永远加密和备份高敏感性和珍贵的数据。** 下面的方法只能避免常见的文件操作，并不能阻止专门为了盗取或摧毁已卸载磁盘内数据的恶意软件。
 
@@ -437,15 +437,15 @@ PS C:\Windows\system32> bcdedit /set "{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}" de
 
 ### 虚拟内存
 
-[Windows 不支持在虚拟磁盘存放虚拟内存分页文件；](https://social.technet.microsoft.com/Forums/windows/en-US/dd78df78-7025-4ed7-ac47-2310e814c68f/native-vhd-boot-and-swapfile?forum=w7itprovirt)因此你需要将分页文件直接存储在物理磁盘上。
+如果你在上一步遇到了问题，原因很可能是 Windows 在你要卸载的物理卷上启用了虚拟内存。要顺利卸载，你需要先在禁止 Windo𥥈ws 在它们上面存储虚拟内存分页文件。
 
-如果你卸载了所有物理磁盘和分区，Windows 将无处存放分页文件，并会在开机时弹出“性能选项”，提示你分配一个分页文件：
+在 <code>性能选项（<i class="fa fa-windows"></i> + R -> SystemPropertiesPerformance.exe）-> 高级 -> 虚拟内存 -> 更改</code> ，取消选择“自动管理所有驱动器的分页文件大小”。然后挨个选择你要卸载的分区，然后选择“无分页文件”：
 
-<img alt=pagefile-not-found src=images/pagefile-not-found.webp width=450>
+<img alt=disabling-pagefiles src=images/disabling-pagefiles.webp width=450>
 
-很抱歉 ~~(*noarch* 又跟微软没关系我道什么歉啊)~~ 你需要每次开机都面对这个提示。
+[Windows 不支持在虚拟磁盘存放虚拟内存分页文件；](https://social.technet.microsoft.com/Forums/windows/en-US/dd78df78-7025-4ed7-ac47-2310e814c68f/native-vhd-boot-and-swapfile?forum=w7itprovirt)因此，如果你需要使用虚拟内存，请至少保留一个物理卷的挂载。
 
-没有物理分区存放虚拟内存，Windows 会在没有虚拟内存的情况下运行。如果你 PC 的内存较少 ( <=4GiB ), 你可能需要注意内存的使用，以免内存不足，应用无法启动或正常运行。
+没有物理卷存放虚拟内存，Windows 会在没有虚拟内存的情况下运行。如果你 PC 的内存较少 ( <=4GiB ), 你可能需要注意内存的使用，以免内存不足，应用无法启动或正常运行。
 
 ## 在另一个 Windows 中访问虚拟磁盘
 
