@@ -17,8 +17,8 @@ jobs:
 
       - name: Retrieve the latest mdBook release by noarchwastaken
         run: |
-          wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7-noarchwastaken/mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+          wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7_2-noarchwastaken/mdbook-v0.4.7_2-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+          tar -xvf mdbook-*-x86_64-unknown-linux-gnu.tar.gz
 
       - name: Update apt cache
         run: sudo apt update -y
@@ -50,8 +50,8 @@ jobs:
 
       - name: Retrieve the latest mdBook release by noarchwastaken
         run: |
-          wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7-noarchwastaken/mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
-          tar -xvf mdbook-v0.4.7-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+          wget https://github.com/noarchwastaken/mdBook/releases/download/v0.4.7_2-noarchwastaken/mdbook-v0.4.7_2-noarchwastaken-x86_64-unknown-linux-gnu.tar.gz
+          tar -xvf mdbook-*-x86_64-unknown-linux-gnu.tar.gz
 
       - name: Update apt cache
         run: sudo apt update -y
