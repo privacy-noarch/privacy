@@ -8,23 +8,6 @@
 - 隐私保护的理论，技巧，提示以及注意事项
 - ... 还有更多！
 
-## 关于主要作者
-
-noarch, 或写作 *.noarch*
-
-下面是你可能好奇的：
-- 北美高中生
-- 写代码很菜
-- i3-wm on Debian testing
-	- 所以我为什么叫 noarch 呢
-	
-armFusion (aka. *\_armFusion\**)
-
-- 中国高中生
-- 5年 MacBook Pro 使用者, (主要写macOS相关)
-- C++ 绝赞学习中
-- ~~隐私保护方面仍然追随着 *noarch* 前辈的脚步~~
-
 ## 各种阅读姿势
 
 > <i class="fas fa-info-circle"></i> `privacy.noarch` 明网版本使用 Cloudflare CDN. 请尽可能访问下述 Onion v3 站点，支持去中心化和隐私的互联网。
@@ -45,7 +28,7 @@ Onion v3：
 
 [Telegram 频道](https://t.me/privacy_noarch) | [Telegram 群组](https://t.me/chat_privacy_noarch) | [cgit 仓库](https://git.n0ar.ch/privacy) | [GitHub 仓库](https://github.com/noarchwastaken/privacy)
 
-如果你想做更直接的贡献 ~~帮 *noarch* 填坑~~ ，请见[反馈与贡献](CONTRIBUTING.md)！
+如果你想做更直接的贡献 ~~帮 noarch 填坑~~ ，请见[反馈与贡献](CONTRIBUTING.md)！
 
 ## 版权相关
 

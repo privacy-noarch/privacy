@@ -23,7 +23,7 @@
 “[代理服务器](https://en.wikipedia.org/wiki/Proxy_server)”是一种常见的翻墙方式。其基本原理是**通过一个中间人把信息送达目标地址**（网站、服务...）。
 
 ![proxy-workings](images/proxy-workings.webp)  
-[来源](https://commons.wikimedia.org/wiki/File:Proxy_concept_en.svg)，由 *noarch* 翻译
+[来源](https://commons.wikimedia.org/wiki/File:Proxy_concept_en.svg)，由 noarch 翻译
 
 从上图可以看出，“代理”是信息交换过程中的“中间人”。在使用代理访问“被墙”网站的时候，向被墙网站的请求先经过代理服务器，而这个代理服务器并没有“被墙”，可以访问。该代理服务器本身也在“墙外” - 它处于中国大陆之外，并不受审查。通过一个没有“被墙”，也不受墙管理的代理服务器中转，你就可以访问被墙的网站和服务了。
 

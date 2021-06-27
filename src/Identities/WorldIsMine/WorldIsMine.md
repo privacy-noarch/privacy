@@ -2,11 +2,11 @@
 
 转自 Telegram 频道 [Notes of World is Mine](https://t.me/CWorldisMine). [原文链接](https://t.me/CWorldisMine/138)
 
-> *noarch* 注：这个方案**仅供参考**。
+> noarch 注：这个方案**仅供参考**。
 >
 > 每个人的生活环境、社会地位，以及威胁模型都不一样；因此你需要作出对应的调整。转载这个方案的目的是列出一些常见的考量，并在此过程中揭露一些你可能没有注意到的威胁。
 >
-> 转载此文章不代表 `privacy.noarch` 赞成其中的所有做法；*noarch* 会在文章结束后提出一些不同的意见，以及回答遗留问题。
+> 转载此文章不代表 `privacy.noarch` 赞成其中的所有做法；noarch 会在文章结束后提出一些不同的意见，以及回答遗留问题。
 
 ---
 
@@ -113,19 +113,19 @@ E，明年上了大学之后，要在集体宿舍里居住，无法保证完全�
 
 ---
 
-## *noarch* 的评论
+## noarch 的评论
 
-首先，感谢 [<i class="fa fa-telegram" aria-hidden="true"></i> @WorldisMineTelegram](https://t.me/WorldisMineTelegram) 的贡献。*noarch* 相信大多数人对于网络身份的隔离都是完全保留在心，而不分享。World is Mine 则将它的整改过程和思路用文本写了下来，除去其中的敏感个人信息，然后以利于社区的方式发布。
+首先，感谢 [<i class="fa fa-telegram" aria-hidden="true"></i> @WorldisMineTelegram](https://t.me/WorldisMineTelegram) 的贡献。noarch 相信大多数人对于网络身份的隔离都是完全保留在心，而不分享。World is Mine 则将它的整改过程和思路用文本写了下来，除去其中的敏感个人信息，然后以利于社区的方式发布。
 
 ### 几点异议
 
 #### iPhone 并不尊重隐私
 
-[身份1](#1身份1)中提到了，它只属于专用 iPhone 或电脑虚拟机内，阻止一切摄像头、麦克风等访问；*noarch* 想说 iPhone 其实比一些开源的 Android ROM 更加侵犯隐私。
+[身份1](#1身份1)中提到了，它只属于专用 iPhone 或电脑虚拟机内，阻止一切摄像头、麦克风等访问；noarch 想说 iPhone 其实比一些开源的 Android ROM 更加侵犯隐私。
 
-iPhone 具有几乎关不掉的位置记录，它的应用商店依赖专有服务，并且你基本上必须要登录 Apple 账户才能正常使用。登录了 Apple 账户就意味着有信息会被传送到云端，而根据账户所属地区不同，政府可能有权限直接访问这个 Apple 账户。同时因为 Apple 的软件是闭源的，即使关闭了同步服务，*noarch* 也怀疑它可以被后门打开。
+iPhone 具有几乎关不掉的位置记录，它的应用商店依赖专有服务，并且你基本上必须要登录 Apple 账户才能正常使用。登录了 Apple 账户就意味着有信息会被传送到云端，而根据账户所属地区不同，政府可能有权限直接访问这个 Apple 账户。同时因为 Apple 的软件是闭源的，即使关闭了同步服务，noarch 也怀疑它可以被后门打开。
 
-实际上，*noarch* 认为“红色”的身份完全不应该在手机上操作，并且只应当在**经过 VPN 网关的虚拟机**，例如搭配 [Whonix Gateway](https://www.whonix.org/) 的虚拟机上操作。这样能保证，除非被专门设计于虚拟机逃逸，否则就连病毒也无法伤害你的匿名性。
+实际上，noarch 认为“红色”的身份完全不应该在手机上操作，并且只应当在**经过 VPN 网关的虚拟机**，例如搭配 [Whonix Gateway](https://www.whonix.org/) 的虚拟机上操作。这样能保证，除非被专门设计于虚拟机逃逸，否则就连病毒也无法伤害你的匿名性。
 
 对于智能手机对你的监控，你还可以参考 [黄貂鱼 (IMSI Catchers) 的崛起](https://www.iyouport.org/%e9%bb%84%e8%b2%82%e9%b1%bc%e7%9a%84%e5%b4%9b%e8%b5%b7/)。这篇文章的概要是，只要这个手机不在飞行模式，政府就可以监视到你的位置。
 
@@ -149,7 +149,7 @@ iPhone 具有几乎关不掉的位置记录，它的应用商店依赖专有服�
 
 #### “邀请制”的人性弱点
 
-社交工程攻击，*noarch* 应该不用过多解释了。在身份2写随笔的情况下，攻击者可以得知你很多的爱好和性格。它进而可以通过这个夺取你的信任，进入身份3，毁掉你的匿名性。
+社交工程攻击，noarch 应该不用过多解释了。在身份2写随笔的情况下，攻击者可以得知你很多的爱好和性格。它进而可以通过这个夺取你的信任，进入身份3，毁掉你的匿名性。
 
 身份3“升级”到身份2的关系也值得商榷：往往，对你威胁最多的，就是和你最亲密的人。如果让他们知道了你的身份3，无论是有意还是无意，或是在意外发生时（例如被审讯），他们都无法保护你的身份2不被得知。
 
@@ -163,17 +163,17 @@ C, 不建议修改，即使修改也无用。**永远假设**这些更改是被�
 
 D, 建议，主要为了防止人工错误（例如用错帐号或传错图片）。参考方案有虚拟机，Android Work Profile, Android 多用户。
 
-E, 多系统 / 虚拟机，选用防窥膜，[**使用密码管理器**](https://privacytools.io/software/passwords/)，[对文件进行加密](https://privacytools.io/software/encryption-tools/)，并使用[端到端加密的电子记事本](https://privacytools.io/software/notebooks/)。*noarch* 认为用纸笔记密码是最不安全的方案之一：它不防偷盗，不防搜查，搜索麻烦...
+E, 多系统 / 虚拟机，选用防窥膜，[**使用密码管理器**](https://privacytools.io/software/passwords/)，[对文件进行加密](https://privacytools.io/software/encryption-tools/)，并使用[端到端加密的电子记事本](https://privacytools.io/software/notebooks/)。noarch 认为用纸笔记密码是最不安全的方案之一：它不防偷盗，不防搜查，搜索麻烦...
 
 ### 更多的问题
 
-*noarch* 想到了一个问题，如果你使用身份1发现了一个有趣的圈子，你将如何向这个圈子投入更多？例如你发现了 `privacy.noarch`, 想要为它做贡献。
+noarch 想到了一个问题，如果你使用身份1发现了一个有趣的圈子，你将如何向这个圈子投入更多？例如你发现了 `privacy.noarch`, 想要为它做贡献。
 
-根据你的电脑配置，在 Whonix Workstation 里编辑 Markdown 并预览真的不是什么好体验... 而如果你像 *noarch* 一样，每周投入3-4个小时进这个项目，你很快就会无法忍受 VirtualBox, 特别是 Whonix Workstation 在处理文字上的卡慢。
+根据你的电脑配置，在 Whonix Workstation 里编辑 Markdown 并预览真的不是什么好体验... 而如果你像 noarch 一样，每周投入3-4个小时进这个项目，你很快就会无法忍受 VirtualBox, 特别是 Whonix Workstation 在处理文字上的卡慢。
 
 > 注：Whonix Workstation 打字卡慢是故意为之的一个功能，称之为 [Kloak](https://github.com/vmonaco/kloak). 它可以随机化你打字时的按键间隔，并由此抵抗[键盘生物识别](https://www.whonix.org/wiki/Keystroke_Deanonymization)。
 
-最后，*noarch* 希望所有人都能有一个匿名的身份，并能在他们之间游走自如。
+最后，noarch 希望所有人都能有一个匿名的身份，并能在他们之间游走自如。
 
 ---
 

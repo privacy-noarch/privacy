@@ -201,7 +201,7 @@ DuckDuckGo 确实没有被内置到中文的 Chrome 当中。有一个解决方�
 
 <img alt="bromite-search-engines-duckduckgo" src="images/bromite-search-engines-duckduckgo.webp" width=450>
 
-然而，在 *noarch* 的测试当中，这个方法并不 100% 有效... 下面的视频展示了另一个有效的方法。如果让 Bromite 自动添加 DuckDuckGo 的方法失败了，你可以尝试下面的方法。
+然而，在 noarch 的测试当中，这个方法并不 100% 有效... 下面的视频展示了另一个有效的方法。如果让 Bromite 自动添加 DuckDuckGo 的方法失败了，你可以尝试下面的方法。
 
 下面的视频使用类原生 Android 作为示例。不同手机厂商系统的操作可能会有差别。
 

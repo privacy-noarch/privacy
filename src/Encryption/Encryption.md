@@ -6,7 +6,7 @@
 
 它需要经过一系列的路由，如果你所在的地方有防火墙的话它还需要经过防火墙的审查，甚至可能经由长达数万公里的海底光缆，才能到达你的目标。
 
-比如 *noarch* 要访问自己的网站 [`privacy.n0ar.ch`](https://privacy.n0ar.ch), 其中网站的数据会经过这些地方：
+比如 noarch 要访问自己的网站 [`privacy.n0ar.ch`](https://privacy.n0ar.ch), 其中网站的数据会经过这些地方：
 
 ```
 [noarch@fedora ~]$ traceroute privacy.n0ar.ch
@@ -34,9 +34,9 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 
 这途中任何一个节点都可以截取你传输的信息。更可怕的是，它们甚至可以修改其中的信息，将你重定向到恶意网页，或是向你呈现钓鱼内容...
 
-试想一下你在访问 `privacy.noarch` 时，所有 *noarch* 想要传达给你的信息都被一个攻击者替换，引诱你做一些暴露自己隐私的事情。这听起来真的可怕...
+试想一下你在访问 `privacy.noarch` 时，所有 noarch 想要传达给你的信息都被一个攻击者替换，引诱你做一些暴露自己隐私的事情。这听起来真的可怕...
 
-所以 *noarch* 在 `privacy.noarch` 上应用了**加密**。它将你现在阅读的明文编码成无法理解的乱码，并且通过一些方式，只允许你能够读取其中的意义。
+所以 noarch 在 `privacy.noarch` 上应用了**加密**。它将你现在阅读的明文编码成无法理解的乱码，并且通过一些方式，只允许你能够读取其中的意义。
 
 ## 更详细一点，加密是什么？
 
@@ -56,12 +56,12 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 
 在本文写成时（2020 年），互联网上的信息传输和存储同时比你想象得安全，和危险。
 
-关于它，*noarch* 有一个好消息和一个坏消息要告诉你：
+关于它，noarch 有一个好消息和一个坏消息要告诉你：
 
 - 好消息是，得益于 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) 的广泛使用，在互联网信息传输过程中你的发送和接收的信息一般是安全的。
 	- 比如你在浏览网页时，只要网页启用了 [HTTPS](https://en.wikipedia.org/wiki/HTTPS), 你就不需要担心你的学校或公司看到你搜索 *~~bbq sauce on titties~~*. 它们唯一可能知道的是，你在进行搜索。
 	- 不过如果你跟随搜索结果的链接进入 PornHub, 它们也会知道你在访问 PornHub, 但不知道你具体观看了什么视频。
-	- 前面 *noarch* 提到的 `privacy.noarch` 使用的加密就是 HTTPS。
+	- 前面 noarch 提到的 `privacy.noarch` 使用的加密就是 HTTPS。
 
 - 坏消息是，**你的信息在到达了“云端”后会被解密**。“云端”是否加密你的数据，如何加密数据则是完全另一个故事了。
 
@@ -112,7 +112,7 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 
 	2.1. **但如果你在非法持有多国籍呢？** 现在警察知道了你的双 / 多重国籍，并且这可能标记着你非法多国籍生涯的终结。
 
-	> ***noarch* 反对任何非法持有多国籍的做法。**
+	> **noarch 反对任何非法持有多国籍的做法。**
 
 3. 它被定制的恶意软件发送到攻击者的手里。这不太可能发生，但如果你是一个高价值目标，你可能现在就是恶意软件的受害者而不知。
 
@@ -124,7 +124,7 @@ traceroute to privacy.n0ar.ch (104.24.98.152), 30 hops max, 60 byte packets
 
 ## 如何自己管理数据加密？
 
-现代的加密方式种类繁多。根据你要加密的数据类型，*noarch* 会主要介绍两种加密方式：
+现代的加密方式种类繁多。根据你要加密的数据类型，noarch 会主要介绍两种加密方式：
 
 - PGP (Pretty Good Privacy, 在隐私方面相当好), 饱经考验的非对称（公钥）加密，主要用于加密电子邮件，聊天和单个文件
 	- [公钥加密简介](Pubkey/Pubkey.md)

@@ -8,7 +8,7 @@
 
 比如你要保持一个电脑上的文件不被互联网上的病毒窃取。你花了很多功夫为它进行加固，还配置了杀毒软件和严格的防火墙，并且对这个文件进行了加密。然而在这种情况下，你面对的对手仅仅是来自互联网的病毒；实际上你只需要将其断网，并专门分配一个存储介质用于传输文件即可。
 
-下面 *noarch* 就教你如何禁止输入法（或任何其它应用）联网，防止它上传任何信息到其服务器上。
+下面 noarch 就教你如何禁止输入法（或任何其它应用）联网，防止它上传任何信息到其服务器上。
 
 > <i class="fa fa-info-circle" aria-hidden="true"></i> 一些 AOSP 以及厂商系统没有此功能。如果你发现下面的步骤不适用于自己，请改用[同文输入法]()等不联网的输入法。
 
@@ -46,7 +46,7 @@
 
 <img alt=settings-app-info-sogou src=images/settings-app-info-sogou.webp width=400>
 
-在 *noarch* 使用的 LineageOS 中，对应用的联网控制选项称为 `移动数据和 WLAN`; 其中的联网总开关称为 `允许网络访问`。
+在 noarch 使用的 LineageOS 中，对应用的联网控制选项称为 `移动数据和 WLAN`; 其中的联网总开关称为 `允许网络访问`。
 
 <img alt=settings-sogou-network-enabled src=images/settings-sogou-network-enabled.webp width=370>
 <img alt=settings-sogou-network-disabled src=images/settings-sogou-network-disabled.webp width=370>
@@ -59,7 +59,7 @@
 
 ## 控制权限
 
-*noarch* 还建议你在 `应用信息 - 权限` 内拒绝该输入法的所有权限请求，**尤其是存储权限。**
+noarch 还建议你在 `应用信息 - 权限` 内拒绝该输入法的所有权限请求，**尤其是存储权限。**
 
 这样能防止输入法将收集的数据存储在内部存储里，供其它没有被禁止联网的追踪应用读取并且上传。
 

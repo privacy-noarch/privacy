@@ -26,7 +26,7 @@
 
 #### Markdown 语法
 
-为了人类可读性和编写的便捷，Markdown 的语法很灵活：很多不同的语法可以带来相同的结果。*noarch* 为了最大化文章的可读性和格式的统一，拟定了一个 Markdown 语法使用规范：
+为了人类可读性和编写的便捷，Markdown 的语法很灵活：很多不同的语法可以带来相同的结果。noarch 为了最大化文章的可读性和格式的统一，拟定了一个 Markdown 语法使用规范：
 
 | 效果 | 格式 |
 | -- | -- |
@@ -40,7 +40,7 @@
 
 #### 文法与语气
 
-*noarch* 原本想尽量接近“维基”的语气和文法，但在写作的过程中发现使用第二人称、贴近日常生活的语气更加亲切。
+noarch 原本想尽量接近“维基”的语气和文法，但在写作的过程中发现使用第二人称、贴近日常生活的语气更加亲切。
 
 请不要大量使用幽默，或是使用可能带来误导的幽默，以保证读者都能正确遵循指导。
 
@@ -112,7 +112,7 @@ Markdown 不具备调整图片大小的能力，但你可以在 Markdown 里用 
 
 #### 在代码块中使用 Font Awesome
 
-*noarch* 找不到好方法来让 Font Awesome 的引用逃逸 Markdown 的代码段 / 块 ; 于是只好用 `html` 的 `<code>` 块来代替。下面是一个例子：
+noarch 找不到好方法来让 Font Awesome 的引用逃逸 Markdown 的代码段 / 块 ; 于是只好用 `html` 的 `<code>` 块来代替。下面是一个例子：
 
 ```
 <code><i class="fa fa-smile-o" aria-hidden="true"></i> 可以被正确显示。</code>
@@ -134,9 +134,9 @@ Markdown 不具备调整图片大小的能力，但你可以在 Markdown 里用 
 
 请使用[这个列表](https://en.wikipedia.org/wiki/List_of_open_formats)中列出的开放格式。这样可以保证读者不需要为阅读 `privacy.noarch` 付任何直接或间接的版权费。使用开放格式同时也是一种推广它们的方式。
 
-位图请尽量使用 WEBP 格式编码，以加快页面加载速度；如果转载或截取的原图非 WEBP, *noarch* 建议你把它们转换成无损压缩的 WEBP.
+位图请尽量使用 WEBP 格式编码，以加快页面加载速度；如果转载或截取的原图非 WEBP, noarch 建议你把它们转换成无损压缩的 WEBP.
 
-下面是 *noarch* 在 GNU/Linux 上使用 `ImageMagick` 批量将 `.jpg` 和 `.png` 转换成无损 `.webp` 的 one-liner:
+下面是 noarch 在 GNU/Linux 上使用 `ImageMagick` 批量将 `.jpg` 和 `.png` 转换成无损 `.webp` 的 one-liner:
 
 ```
 $ mogrify -format webp -define webp:lossless=true *.png && rm *.png && mogrify -format webp -define webp:lossless=true *.jpg && rm *.jpg
@@ -152,7 +152,7 @@ $ mogrify -format webp -define webp:lossless=true *.png && rm *.png && mogrify -
 
 请在进行任何非原创引用时检查来源的版权信息，并注明来源。
 
-在引用维基百科条目解释名词时，除非中文版条目质量非常接近英文版，否则请引用英文版条目。*noarch* 很遗憾需要这么做，因为中文版维基百科在隐私和计算机领域的条目可参考性还有很长一段路要走。
+在引用维基百科条目解释名词时，除非中文版条目质量非常接近英文版，否则请引用英文版条目。noarch 很遗憾需要这么做，因为中文版维基百科在隐私和计算机领域的条目可参考性还有很长一段路要走。
 
 不过，如果你为 `privacy.noarch` 翻译了英文版维基百科的条目，请把它贡献回中文版维基百科的对应条目，让它们在艰难的环境下也能成长！
 

@@ -2,11 +2,11 @@
 
 转自 [iYouPort](https://www.iyouport.org/%e5%88%86%e8%a3%82%e4%ba%ba%e6%a0%bc%e7%9a%84%e9%ad%85%e5%8a%9b/); 原文似乎翻译或引用了一些外部信息，但没有注明来源。
 
-> *noarch* 注：原文格式非常乱 - “英文与全角齐飞，括号共链接一色。” *noarch* 尽可能修复了原文中的死链和对符号的错误使用，但没有时间使其完全遵守 `privacy.noarch` 的[格式规范](/CONTRIBUTING.md#文本格式)。
+> noarch 注：原文格式非常乱 - “英文与全角齐飞，括号共链接一色。” noarch 尽可能修复了原文中的死链和对符号的错误使用，但没有时间使其完全遵守 `privacy.noarch` 的[格式规范](/CONTRIBUTING.md#文本格式)。
 >
 > 同时，iYouPort 的文章风格与 `privacy.noarch` 大相径庭：`privacy.noarch` 主要以线性的，易于跟随的新手教程为主；iYouPort 则因为贡献者众多，风格各异，大多结构松散。虽然不是非常好读，但这个文章确实能帮你为多重身份做准备。
 
-> 在阅读之前，*noarch* 还请你注意这篇文章似乎不太清楚“威胁模型”和你的实际情况；例如它可能会叫你删除你的 Facebook 帐号，而很可能你本来就没有 Facebook 帐号，或你目前的 Facebook 帐号就足够匿名。它还假设你有一定的 IT 技术，例如叫你使用 Qubes OS. 这个话题在 `privacy.noarch` 的背景下比较复杂，但 *noarch* 考虑在完成 `privacy.noarch` 的主要目标后写一些 Qubes OS 的注意事项。
+> 在阅读之前，noarch 还请你注意这篇文章似乎不太清楚“威胁模型”和你的实际情况；例如它可能会叫你删除你的 Facebook 帐号，而很可能你本来就没有 Facebook 帐号，或你目前的 Facebook 帐号就足够匿名。它还假设你有一定的 IT 技术，例如叫你使用 Qubes OS. 这个话题在 `privacy.noarch` 的背景下比较复杂，但 noarch 考虑在完成 `privacy.noarch` 的主要目标后写一些 Qubes OS 的注意事项。
 
 ---
 

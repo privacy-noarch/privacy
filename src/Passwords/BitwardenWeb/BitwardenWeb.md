@@ -13,11 +13,11 @@ Bitwarden 不怎么特别，但它拥有一个密码管理器应有的所有安�
 
 ## 回顾
 
-[上一章](../Passwords.md)中 *noarch* 定义了一个合格的密码管理器，我们将要介绍的 Bitwarden 就是符合标准的一个。
+[上一章](../Passwords.md)中 noarch 定义了一个合格的密码管理器，我们将要介绍的 Bitwarden 就是符合标准的一个。
 
 它使用 [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) 加密你的密码库，并将你的主密码使用加盐的 [PBKDF2 SHA-256](https://en.wikipedia.org/wiki/PBKDF2) 形式存储，以保证密码库的**零访问**。零访问意味着你的密码库只在客户端被解密，就连 Bitwarden 的员工或可能搜查 Bitwarden 的警方都无法通过正常方式获取你的密码。
 
-最重要的 - 它几乎全由自由软件组成。得益于此，如果你不信任 Bitwarden 官方云，你甚至可以自己搭建 Bitwarden 服务器，自己管理自己的数据；不过 *noarch* 不会在此教你如何自建 Bitwarden 服务器。
+最重要的 - 它几乎全由自由软件组成。得益于此，如果你不信任 Bitwarden 官方云，你甚至可以自己搭建 Bitwarden 服务器，自己管理自己的数据；不过 noarch 不会在此教你如何自建 Bitwarden 服务器。
 
 ## 可能的疑问
 
@@ -51,7 +51,7 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 不过**等一下**。你可能现在就在犯一个错误：**在密码管理器上使用你之前用过的密码。**
 
-***noarch* 强烈反对这种行为**。
+**noarch 强烈反对这种行为**。
 
 请当场想出一个够强的密码，它最好有至少 15 位，拥有大小写字母、数字和符号...
 
@@ -61,33 +61,33 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 在我们把生成密码这件事交给密码管理器前，请想想你之前用过的密码。
 
-*noarch* 就用过自己的名字首字母和生日；现在想起来最可怕的一个是直接使用用户名，加上其中几个字符用 [Leet (1337)](https://en.wikipedia.org/wiki/Leet) 替换成对应的符号和数字。
+noarch 就用过自己的名字首字母和生日；现在想起来最可怕的一个是直接使用用户名，加上其中几个字符用 [Leet (1337)](https://en.wikipedia.org/wiki/Leet) 替换成对应的符号和数字。
 
-请别这样做。如果你使用这些能联系到个人身份，或是关于你的，长久有效的信息，例如 ~~`n0@rcH1sn0tgaY`~~, 充分了解你的人将能猜出这个密码，或黑客可以通过你的密码获取你的相关信息。例如上面的密码 ~~`n0@rcH1sn0tgaY`~~ 看起来很强，但了解 *noarch* 的人有一定的可能性会猜出它来。
+请别这样做。如果你使用这些能联系到个人身份，或是关于你的，长久有效的信息，例如 ~~`n0@rcH1sn0tgaY`~~, 充分了解你的人将能猜出这个密码，或黑客可以通过你的密码获取你的相关信息。例如上面的密码 ~~`n0@rcH1sn0tgaY`~~ 看起来很强，但了解 noarch 的人有一定的可能性会猜出它来。
 
-所以 *noarch* 想要分享一下自己的密码“生成”思路，它用来“生成”你的密码管理器主密码：
+所以 noarch 想要分享一下自己的密码“生成”思路，它用来“生成”你的密码管理器主密码：
 
-> <i class="fa fa-info-circle" aria-hidden="true"></i> 这只是 *noarch* 的个人做法，提供给那些根本想不出来的读者。如果你有更好的主意，*noarch* 将会非常感谢你的[贡献](/CONTRIBUTING.md)。
+> <i class="fa fa-info-circle" aria-hidden="true"></i> 这只是 noarch 的个人做法，提供给那些根本想不出来的读者。如果你有更好的主意，noarch 将会非常感谢你的[贡献](/CONTRIBUTING.md)。
 
-0. 像 *noarch* 之前讲的，避开任何自己的长期信息。任何“最喜欢的”也要避开。
+0. 像 noarch 之前讲的，避开任何自己的长期信息。任何“最喜欢的”也要避开。
 1. 想想自己**最近**做的事情、读的书、看的电影或是玩过的游戏。
 2. 如果适用，你也可以想想这些书、游戏或电影中发生的事。
-3. 把它们写下来。*noarch* 最近在读 [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman) 的传记 [*Free as in Freedom*](https://en.wikipedia.org/wiki/Free_as_in_Freedom).
+3. 把它们写下来。noarch 最近在读 [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman) 的传记 [*Free as in Freedom*](https://en.wikipedia.org/wiki/Free_as_in_Freedom).
 4. 用 [1337](https://en.wikipedia.org/wiki/Leet) 编码它。这样它就包含了数字和符号。
-5. 加上一些非常易变的数字。比如你“生成”密码时的时间，或是你现在在使用的某个软件版本号。*noarch* 在“生成”这个密码时的时间是下午 5:40.
+5. 加上一些非常易变的数字。比如你“生成”密码时的时间，或是你现在在使用的某个软件版本号。noarch 在“生成”这个密码时的时间是下午 5:40.
 6. 把它夹在第4步得出的内容中间某个位置。
 
-经过这样一个步骤，*noarch* 写出了一个这样的密码：
+经过这样一个步骤，noarch 写出了一个这样的密码：
 
 ![](images/bw-reg-pwd.webp)
 
-如果你有任何其它主意，你还可以把它和 *noarch* 的方法结合在一起！例如你还可以把最后的 `Freed.m` 倒序成 `m.deerF`, 得出最终结果 `fR3e@s!n1740m.deerF`. 现在你就得到了一个基本没人猜得出来，并且机器也难以爆破的主密码，用于加密你的 Bitwarden 密码库。
+如果你有任何其它主意，你还可以把它和 noarch 的方法结合在一起！例如你还可以把最后的 `Freed.m` 倒序成 `m.deerF`, 得出最终结果 `fR3e@s!n1740m.deerF`. 现在你就得到了一个基本没人猜得出来，并且机器也难以爆破的主密码，用于加密你的 Bitwarden 密码库。
 
-> 别担心，*noarch* 当然不会将上述密码进行实际使用，你也绝对不要真用上述的示例密码。
+> 别担心，noarch 当然不会将上述密码进行实际使用，你也绝对不要真用上述的示例密码。
 
 最后，你可以选择提供一个密码提示；当你真的忘记密码时，你可以请求 Bitwarden 将它发送到你的邮箱里。
 
-> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 密码提示是明文存储的，并且另一款密码管理器 [LastPass 曾经发生的数据泄露](https://www.pcworld.com/article/2936621/the-lastpass-security-breach-what-you-need-to-know-do-and-watch-out-for.html)中就包含密码提示。因此，请不要在内填写有关自己的信息。例如 *noarch* 简单地在这里写了 `GNU`, 因为 `GNU` 就是密码中提到的“自由软件”概念开创者之一。
+> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 密码提示是明文存储的，并且另一款密码管理器 [LastPass 曾经发生的数据泄露](https://www.pcworld.com/article/2936621/the-lastpass-security-breach-what-you-need-to-know-do-and-watch-out-for.html)中就包含密码提示。因此，请不要在内填写有关自己的信息。例如 noarch 简单地在这里写了 `GNU`, 因为 `GNU` 就是密码中提到的“自由软件”概念开创者之一。
 
 ### 记住密码
 
@@ -137,7 +137,7 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 > <i class="fa fa-info-circle" aria-hidden="true"></i> 取决于你的邮件客户端安全设置，这封邮件可能会像上图一样无法正常加载。不用担心，这个按钮能在不加载远程内容的情况下工作。
 >
-> *noarch* 推荐像 [Thunderbird]() 或 [Tutanota]() 这样**拦截远程内容**的邮件客户端 / 提供商，它们能帮你阻挡大部分来自邮件的恶意软件，并防止邮件发送者通过远程请求追踪你。
+> noarch 推荐像 [Thunderbird]() 或 [Tutanota]() 这样**拦截远程内容**的邮件客户端 / 提供商，它们能帮你阻挡大部分来自邮件的恶意软件，并防止邮件发送者通过远程请求追踪你。
 
 在**确认来源地址**是 `no-reply@bitwarden.com` 后，点击这个按钮，你会被带到一个有提示的登录页面。
 
@@ -151,7 +151,7 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 在 Bitwarden 存储密码同样简单明了。
 
-不过，如果你在密码管理器存储以前重复使用的密码，它将失去意义。所以 *noarch* 将在这演示为 Tutanota 邮箱使用 Bitwarden 生成并保存密码。
+不过，如果你在密码管理器存储以前重复使用的密码，它将失去意义。所以 noarch 将在这演示为 Tutanota 邮箱使用 Bitwarden 生成并保存密码。
 
 要让 Bitwarden 为你保存密码，点击“添加项目”。
 
@@ -161,7 +161,7 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 ![](images/bw-form.webp)
 
-虽然 URI 是可选的，但 *noarch* 建议你填写它。URI 有两个用途：
+虽然 URI 是可选的，但 noarch 建议你填写它。URI 有两个用途：
 
 0. 用于获取这个帐号的图标，并展示在 Bitwarden 密码库内。
 1. 用于自动填写。这个会在你使用 [Bitwarden 浏览器插件或手机应用]()时有用。
@@ -228,7 +228,7 @@ Bitwarden 的注册非常简单明了。首先我们打开 Bitwarden 的官网 [
 
 ## 进阶功能
 
-下面是一些 *noarch* 认为一般人可能不会用到的功能，但也会在这做介绍。
+下面是一些 noarch 认为一般人可能不会用到的功能，但也会在这做介绍。
 
 ### 存储信用卡、身份、以及笔记
 
@@ -254,13 +254,13 @@ WkRUdb6LRqF8sC
 
 Bitwarden 这样做是为了保证最大兼容性，因为有些服务不支持密码中包含符号。
 
-不过 *noarch* 以及一些其它密码管理器，例如 KeepassXC 认为这样生成的密码强度不够高。因此，如果你有需要，可以调节 Bitwarden 密码生成器参数。
+不过 noarch 以及一些其它密码管理器，例如 KeepassXC 认为这样生成的密码强度不够高。因此，如果你有需要，可以调节 Bitwarden 密码生成器参数。
 
 在 Bitwarden 密码库顶栏点击 `工具 -> 密码生成器`，你应该能看见一个专门的密码生成器：
 
 ![](images/bw-pwdgen.webp)
 
-在这里你可以调节密码类型、长度、包含的字符集以及每种字符最小个数。*noarch* 建议你将密码生成器调成这样。现在它长度为 24 位，包含完整的 `[A-Za-z0-9!@#$%^&*]`.
+在这里你可以调节密码类型、长度、包含的字符集以及每种字符最小个数。noarch 建议你将密码生成器调成这样。现在它长度为 24 位，包含完整的 `[A-Za-z0-9!@#$%^&*]`.
 
 ![](images/bw-pwdgen-rec.webp)
 
@@ -290,7 +290,7 @@ Bitwarden 可以将你的密码库导出为 `json` 或 `csv` 格式，它们可�
 
 ### 修改账户设置
 
-如果你不慎泄露了主密码 (*noarch* 希望你绝对不要)，或你的邮箱被盗，在伤害发生前请立刻在 Bitwarden 内修改对应的设置。
+如果你不慎泄露了主密码 (noarch 希望你绝对不要)，或你的邮箱被盗，在伤害发生前请立刻在 Bitwarden 内修改对应的设置。
 
 你可以进入 `设置 -> 我的账户` 修改这些设置。无论是修改邮箱地址或是主密码，你都需要确认当前的主密码。
 
@@ -302,4 +302,4 @@ Bitwarden 可以将你的密码库导出为 `json` 或 `csv` 格式，它们可�
 
 虽然目前你的 Bitwarden 密码库内只存有一个帐号，不过你可以在之后使用某个没有存入 Bitwarden 的帐号时下意识将它存入 Bitwarden 并**通过上述方法改密码**。
 
-**密码管理器的使用时间越久，它对你提供的便利和安全性越大**；*noarch* 希望你不要被刚开始的麻烦吓跑，因为它在长期使用后是你的得力助手。
+**密码管理器的使用时间越久，它对你提供的便利和安全性越大**；noarch 希望你不要被刚开始的麻烦吓跑，因为它在长期使用后是你的得力助手。

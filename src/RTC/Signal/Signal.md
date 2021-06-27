@@ -19,7 +19,7 @@ Signal - *畅所欲言。*
 
 如果用过，你应该熟悉苹果的 [iMessage](https://support.apple.com/explore/messages). 或者如果你没听说过 iMessage, 你应该注意到了，在给同样使用苹果设备的朋友发短信时，能使用一些有趣的功能。
 
-不过 *noarch* 要介绍的不是 iMessage, 而是想与 iMessage 竞争，并且使用体验可以和 iMessage 很像的 **Signal**.
+不过 noarch 要介绍的不是 iMessage, 而是想与 iMessage 竞争，并且使用体验可以和 iMessage 很像的 **Signal**.
 
 与 iMessage 不同的是，Signal 不需要一台苹果设备，并且[端到端加密](/Encryption/Pubkey/Pubkey.md)。
 
@@ -29,15 +29,15 @@ Signal - *畅所欲言。*
 
 如果你在手机流行之前用过 QQ, 那么你应该对“交换 QQ 号”这件事印象深刻。在那时，QQ 只是一个独立的网上身份，在技术上不与你的任何其他身份相关联。
 
-虽然 QQ 现在注册需要实名手机号，但它的背后工作原理依然需要一个独立的 QQ 号。*noarch* 认为这是大多数中国人对“即时通讯”概念的认识。
+虽然 QQ 现在注册需要实名手机号，但它的背后工作原理依然需要一个独立的 QQ 号。noarch 认为这是大多数中国人对“即时通讯”概念的认识。
 
-如果你是 *noarch* 上述的“大多数”，在使用 Signal 前，你需要完全抛弃以前对即时通讯的认识。
+如果你是 noarch 上述的“大多数”，在使用 Signal 前，你需要完全抛弃以前对即时通讯的认识。
 
 Signal 致力于提供一个像短信一样的使用体验，这也意味着**你的手机号是唯一识别码**：除非你专门屏蔽，否则任何知道你手机号的人都可给你发消息；你也无法在更换手机号时迁移你的帐号。
 
 ### 威胁模型
 
-*noarch* 在最上方的一览中提到了 Signal 目前不提供匿名功能，任何与你聊天的人将能看到你的手机号。
+noarch 在最上方的一览中提到了 Signal 目前不提供匿名功能，任何与你聊天的人将能看到你的手机号。
 
 这也注定了 Signal 无法被当作 Telegram 或 Matrix 等更加匿名的即时通讯使用 - 在中国，你需要更多的是匿名性；而 Signal 完全没有提供匿名性。看到你的中国手机号意味着能直接看到你的真实身份：警察可以直接通过手机号查出你的户籍，而其他人则可以通过贿赂警察或使用泄露的数据库达到此效果。
 
@@ -50,7 +50,7 @@ Signal 致力于提供一个像短信一样的使用体验，这也意味着**�
 	- 这是因为你的手机号实名性不强 - 敌人通过你的手机号找出你真实身份将没有那么容易。
 
 - 最后，Signal 的易用性无法比拟。
-	- *noarch* 认为 Signal 的设计目标是**取代传统短信**，没有复杂功能，这使得它非常简单易用。
+	- noarch 认为 Signal 的设计目标是**取代传统短信**，没有复杂功能，这使得它非常简单易用。
 	- 包括以手机号识别身份这点，Signal 的诸多操作逻辑都与传统短彩信一样。
 
 <!-- 从 2021 年 3 月开始，Signal 已在中国被墙。
@@ -58,14 +58,14 @@ Signal 致力于提供一个像短信一样的使用体验，这也意味着**�
 
 你在阅读本章之前可能听说了 Signal 没有被防火长城屏蔽，并将此看作一个 Signal 的优点。
 
-虽然 Signal 可以直连，但 *noarch* 不推荐这么做，因为防火长城会记录所有向墙外的连接，连接 Signal **可能**会使你成为“重点监控对象”。
+虽然 Signal 可以直连，但 noarch 不推荐这么做，因为防火长城会记录所有向墙外的连接，连接 Signal **可能**会使你成为“重点监控对象”。
 
-因此，*noarch* 依然建议[使用代理](/WallBreak/WallBreak.md)连接 Signal, 并只在绝对必要的情况下（例如代理失效）直连。
+因此，noarch 依然建议[使用代理](/WallBreak/WallBreak.md)连接 Signal, 并只在绝对必要的情况下（例如代理失效）直连。
 -->
 
 ### Signal 与 Google 服务
 
-*noarch* 注意到了 Signal 的 Android 版依赖 Google 服务框架进行推送通知。
+noarch 注意到了 Signal 的 Android 版依赖 Google 服务框架进行推送通知。
 
 Signal 在其开发初期需要 Google 服务框架才能运行。这是因为严格上 Android 应用需要 Google 框架来推送通知，及时送达消息。没有了 Google 服务框架提供的[推送通知服务](https://en.wikipedia.org/wiki/Google_Cloud_Messaging)，Signal 需要长期保持后台运行并维持一个 [WebSocket](https://en.wikipedia.org/wiki/WebSocket) 开放以推送消息，而 Android 是禁止这么做的。
 
@@ -75,15 +75,15 @@ Signal 在其开发初期需要 Google 服务框架才能运行。这是因为�
 
 ### 准备好了吗？
 
-除了上述弊端，Signal 在 *noarch* 看来是目前最容易上手的端到端加密通讯工具。
+除了上述弊端，Signal 在 noarch 看来是目前最容易上手的端到端加密通讯工具。
 
-了解了上面的弊端和威胁模型，并将其牢记在心后，你就可以和 *noarch* 一起开始使用 Signal 了！
+了解了上面的弊端和威胁模型，并将其牢记在心后，你就可以和 noarch 一起开始使用 Signal 了！
 
 ## 安装
 
 Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两个渠道，其中一个是 Google Play, 另一个则是直接通过 `apk` 安装。
 
-如果你有 Google Play, 你可以直接去那里安装，然后跳到[下一步](#注册帐号)；下面 *noarch* 将假设你没有 Google Play, 并且使用 `apk` 安装。
+如果你有 Google Play, 你可以直接去那里安装，然后跳到[下一步](#注册帐号)；下面 noarch 将假设你没有 Google Play, 并且使用 `apk` 安装。
 
 首先，在浏览器内打开 Signal 的 `apk` 下载页 [https://signal.org/android/apk/](https://signal.org/android/apk/).
 
@@ -91,7 +91,7 @@ Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两
 
 > <i class="fas fa-exclamation-triangle"></i> 与从 Google Play 安装应用不同，直接从 Signal 官网下载 `apk` 虽然经过 HTTPS 传输，但没有签名验证；这也是 Signal 不建议你直接安装 `apk` 的原因。
 >
-> *noarch* 在此为了简洁，不验证 Signal `apk` 签名。如果你觉得基础设施攻击是你的威胁之一，你可以选择从 Google Play 安装或手动验证签名。
+> noarch 在此为了简洁，不验证 Signal `apk` 签名。如果你觉得基础设施攻击是你的威胁之一，你可以选择从 Google Play 安装或手动验证签名。
 >
 > 更多关于签名验证的知识，请看[这篇来自 Qubes OS 的文章](https://www.qubes-os.org/security/verifying-signatures/)。
 
@@ -103,7 +103,7 @@ Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两
 
 > <i class="fas fa-info-circle"></i> 如果你的设备提示“出于安全考虑，已禁止您的设备安装来自此来源的未知应用”，请点击“设置”并允许来自你浏览器的未知来源应用安装。
 >
-> 请在允许未知来源之前确认要安装的应用是否的确是你要的！在 *noarch* 的例子里，请确认来源是 *Bromite*（浏览器），并且要安装的应用是 *Signal*.
+> 请在允许未知来源之前确认要安装的应用是否的确是你要的！在 noarch 的例子里，请确认来源是 *Bromite*（浏览器），并且要安装的应用是 *Signal*.
 >
 > <img src="images/unknown-source.webp" alt="未知来源安装请求" width=450>
 >
@@ -123,11 +123,11 @@ Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两
 
 > <i class="fas fa-info-circle"></i> Signal 不会以任何形式上传你的通讯录，但会使用它在本地识别联系人；允许 Signal 读取通讯录与否，取决于你要不要将 Signal 替代设备自带短信应用。
 
-*noarch* 在本章里不将 Signal 替换设备自带短信应用，因此 *noarch* 点击“稍后再说”拒绝了 Signal 的通讯录请求。
+noarch 在本章里不将 Signal 替换设备自带短信应用，因此 noarch 点击“稍后再说”拒绝了 Signal 的通讯录请求。
 
 <img src="images/signal-setup-contact-request.webp" alt="Signal 请求通讯录权限" width=450>
 
-现在 Signal 需要你的手机号以注册帐号。*noarch* 在这里使用的是虚拟手机号，但你也可以使用真实手机号。
+现在 Signal 需要你的手机号以注册帐号。noarch 在这里使用的是虚拟手机号，但你也可以使用真实手机号。
 
 > <i class="fas fa-exclamation-triangle"></i> 如果你使用真实的 +86 手机号，请绝对只和最亲密的人使用 Signal.
 
@@ -143,9 +143,9 @@ Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两
 
 验证完成后，就是填写个人信息的时间了。必填项只有“名字”，但你也可以选个头像和“姓氏”。
 
-> <i class="fas fa-exclamation-triangle"></i> *noarch* 注意到众多中国用户在墙内及时通讯使用假名，却在墙外使用真名；这和例如 Signal 的墙外及时通讯在输入框内指示“名字”和“姓氏”不无关系。
+> <i class="fas fa-exclamation-triangle"></i> noarch 注意到众多中国用户在墙内及时通讯使用假名，却在墙外使用真名；这和例如 Signal 的墙外及时通讯在输入框内指示“名字”和“姓氏”不无关系。
 >
-> 尽管 Signal 叫你这么填，但你依然可以只填写一个假名。*noarch* 也建议你使用**墙内从未使用过的**假名，并且不用自己的脸做头像。
+> 尽管 Signal 叫你这么填，但你依然可以只填写一个假名。noarch 也建议你使用**墙内从未使用过的**假名，并且不用自己的脸做头像。
 
 <img src="images/signal-setup-profile.webp" alt="Signal 填写个人信息" width=450>
 
@@ -170,7 +170,7 @@ Signal 和其它 Android 应用的安装没啥区别：Signal 官方提供了两
 
 Signal 主要为传统的短信使用习惯而设计，然而这些设计可能不符合你的使用习惯。
 
-因此，*noarch* 总结了一些你可以在进入 Signal 后进行的隐私和使用习惯配置：
+因此，noarch 总结了一些你可以在进入 Signal 后进行的隐私和使用习惯配置：
 
 ### 不将 Signal 设置为默认短信应用
 
@@ -214,15 +214,15 @@ Signal 会定期提醒你输入 PIN 码以防你忘记。
 
 ## 邀请第一个朋友上 Signal
 
-现在，你可以把本章节转发给你的朋友，让他们也开始使用 Signal 了。当他们也开始使用 Signal, 下面 *noarch* 将教你如何开始一个聊天。
+现在，你可以把本章节转发给你的朋友，让他们也开始使用 Signal 了。当他们也开始使用 Signal, 下面 noarch 将教你如何开始一个聊天。
 
-*noarch* 前面提到了 Signal 的操作逻辑和短信类似；这点从开始聊天时就能体验到。
+noarch 前面提到了 Signal 的操作逻辑和短信类似；这点从开始聊天时就能体验到。
 
 例如，如果你要和一个人开始聊天，你只需要输入它们的手机号，然后发送消息即可；对方在收到你第一条消息后可以选择是否屏蔽你，但全程没有独立的“好友验证”过程。
 
 要找一个朋友开始聊天，在主界面点击右下角的 <i class="fas fa-pencil"></i>，你会进入像短信一样的“选择收件人”界面。
 
-> <i class="fas fa-info-circle"></i> Signal 在这里又会向你请求通讯录权限；*noarch* 在这里选择拒绝。
+> <i class="fas fa-info-circle"></i> Signal 在这里又会向你请求通讯录权限；noarch 在这里选择拒绝。
 >
 > <img src="images/signal-perm-contacts.webp" alt="Signal 再次请求联系人权限" width=450>
 
@@ -234,7 +234,7 @@ Signal 会定期提醒你输入 PIN 码以防你忘记。
 
 <img src="images/signal-chat-grey.webp" alt="Signal 聊天界面，未开始聊天" width=450>
 
-现在这个聊天界面是灰色的，代表你们以前没有用 Signal 通讯过；当你发出第一条消息，它会变成彩色。在 *noarch* 的例子里，当我发出第一条消息，聊天界面变成了粉色 (yay!)
+现在这个聊天界面是灰色的，代表你们以前没有用 Signal 通讯过；当你发出第一条消息，它会变成彩色。在 noarch 的例子里，当我发出第一条消息，聊天界面变成了粉色 (yay!)
 
 <img src="images/signal-chat-pink.webp" alt="Signal 聊天界面" width=450>
 
@@ -358,11 +358,11 @@ Signal 没有专门的“发原图”功能，但你可以将图片以“文件�
 
 ---
 
-到此，*noarch* 已经介绍了 Signal 的所有核心功能和你一定要进行的隐私设置，剩下的功能你可以自己探索！
+到此，noarch 已经介绍了 Signal 的所有核心功能和你一定要进行的隐私设置，剩下的功能你可以自己探索！
 
 ## 附加功能
 
-如果你懒得自己探索所有 Signal 的好玩功能，那么 *noarch* 在这里列出一些给你吧。
+如果你懒得自己探索所有 Signal 的好玩功能，那么 noarch 在这里列出一些给你吧。
 
 ### “回复”消息
 
@@ -374,7 +374,7 @@ Signal 没有专门的“发原图”功能，但你可以将图片以“文件�
 
 ### 端到端加密通话
 
-还记得 *noarch* 在章节开头叫你设置的“总是转发通话”吗？没错，你可以用 Signal 打电话。
+还记得 noarch 在章节开头叫你设置的“总是转发通话”吗？没错，你可以用 Signal 打电话。
 
 除了不消耗通话分钟数以外，Signal 在其网络电话中也使用了端到端加密，意味着你的通话**几乎不可能被窃听**。
 
@@ -420,7 +420,7 @@ Signal 会弹出一个定时器，你可以在这设定消息在阅读后多久�
 
 ## 总结
 
-上面 *noarch* 介绍了 Signal 的常见用法。现在，即使你不太会用其它及时通讯，也应该对 Signal 的操作比较熟悉了。
+上面 noarch 介绍了 Signal 的常见用法。现在，即使你不太会用其它及时通讯，也应该对 Signal 的操作比较熟悉了。
 
 光看无用，现在去把自己的三次元朋友拉到 Signal 上吧！
 

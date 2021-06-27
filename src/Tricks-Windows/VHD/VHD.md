@@ -2,26 +2,26 @@
 
 ---
 
-> <i class="fa fa-info-circle" aria-hidden="true"></i> **这是一篇进阶文章。** 为了保证简洁，本文会讲解更少的基础操作，而更注重细节和原理；尽管如此，*noarch* 也会尽量解释清楚每一个必要的步骤。  
+> <i class="fa fa-info-circle" aria-hidden="true"></i> **这是一篇进阶文章。** 为了保证简洁，本文会讲解更少的基础操作，而更注重细节和原理；尽管如此，noarch 也会尽量解释清楚每一个必要的步骤。  
 > 在阅读本文之前，你应该已经了解了[监考软件](https://www.cipcourses.com/resources/how-does-online-proctoring-work/)，[虚拟机](https://zh.wikipedia.org/zh-cn/%E8%99%9B%E6%93%AC%E6%A9%9F%E5%99%A8)，[虚拟磁盘](https://zh.wikipedia.org/wiki/%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F)以及 [Windows 启动](https://www.thewindowsclub.com/how-does-windows-10-boot)的基本概念，并且熟悉 [Windows 命令行的基本操作](https://www.youtube.com/watch?v=92lpSazVmA4)。如果你还没有，点击前面的链接来了解。
 
-## *noarch* 的碎碎念
+## noarch 的碎碎念
 
 这篇文章开始编写时 (2020-10), 北美的 COVID-19 疫情依然水深火热：美国依然以每天 5w+ 确诊病例 稳 步 增 长 ，加拿大部分省份则见明显反弹。
 
-你可能会疑惑：为什么 *noarch* 要在一篇 IT 文章上讲 COVID-19? 
+你可能会疑惑：为什么 noarch 要在一篇 IT 文章上讲 COVID-19? 
 
 原因是 COVID-19 “使得间谍软件合法化，并且学校强迫让学生安装他们” ([Forbes](https://www.forbes.com/sites/seanlawson/2020/04/24/are-schools-forcing-students-to-install-spyware-that-invades-their-privacy-as-a-result-of-the-coronavirus-lockdown/), [EFF](https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps)).
 
 简单来说：因为 COVID-19 疫情，学生需要完全上网课，同时也要在网上考试；而“为了防止考试作弊”，学校强制学生在考试时安装“监考软件”。
 
-幸运的是，*noarch* 所在的高中依然部分开放，考试照常在学校进行，不需要面对监考软件。然而最近有大学的朋友给我发了这张图：
+幸运的是，noarch 所在的高中依然部分开放，考试照常在学校进行，不需要面对监考软件。然而最近有大学的朋友给我发了这张图：
 
 ![virtual-machine-detection](images/virtual-machine-detection.webp)
 
 这张图里，她尝试在 VMware Fusion 虚拟机里运行监考软件；意料之中的是，监考软件检测到了虚拟机的存在并且拒绝启动。
 
-如果你不知道对客户机隐藏虚拟化状态的方法，或是 *noarch* 将要介绍的使用 VHD 原生启动 Windows, 在 due date 的催促下，你可能就高挂白旗，在日常使用的系统乖乖装上了监考软件。
+如果你不知道对客户机隐藏虚拟化状态的方法，或是 noarch 将要介绍的使用 VHD 原生启动 Windows, 在 due date 的催促下，你可能就高挂白旗，在日常使用的系统乖乖装上了监考软件。
 
 ## 目标和限制
 
@@ -64,7 +64,7 @@
 
 - 一个运行着 Windows 10 的 PC
 	- **<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Windows 10 on ARM 和 Windows 10 S 不支持多启动**
-- 至少 20GiB 的磁盘空闲空间，*noarch* 建议至少保留 60 GiB 以便安装应用
+- 至少 20GiB 的磁盘空闲空间，noarch 建议至少保留 60 GiB 以便安装应用
 - 不按流量计费的网络，因为你将要下载约 5GiB 的 Windows 安装镜像
 - 该 PC 的“管理员” (Administrators) 权限
 - 约 20 分钟的空闲时间
@@ -83,7 +83,7 @@
 
 ![windows10iso-actual](images/windows10iso-actual.webp)
 
-这两种方式 *noarch* 就不在此赘述；你可以在等待下载的同时进行下一步。
+这两种方式 noarch 就不在此赘述；你可以在等待下载的同时进行下一步。
 
 ## 创建虚拟磁盘文件
 
@@ -123,7 +123,7 @@
 
 ![diskmgmt-vhd-init-finished](images/diskmgmt-vhd-init-finished.webp)
 
-接下来你就可以按照正常的方法给这个虚拟磁盘分区。*noarch* 在这里只给虚拟磁盘创建一个 NTFS 分区：
+接下来你就可以按照正常的方法给这个虚拟磁盘分区。noarch 在这里只给虚拟磁盘创建一个 NTFS 分区：
 
 ![diskmgmt-vhd-newpart-menu](images/diskmgmt-vhd-newpart-menu.webp)
 ![diskmgmt-vhd-newpart-dialog](images/diskmgmt-vhd-newpart-dialog.webp)
@@ -138,7 +138,7 @@
 
 接下来是本文最重要的一步：将 Windows 解压到虚拟磁盘里。
 
-这是 *noarch* 想要写这篇文章的主要原因：*noarch* 找到的描述在虚拟磁盘里安装 Windows 的现有中文文章，均使用某种第三方工具或脚本将 Windows “解压”到目标虚拟磁盘。这些工具多数只为对应的教程所写，没有被长期维护，不够可靠。
+这是 noarch 想要写这篇文章的主要原因：noarch 找到的描述在虚拟磁盘里安装 Windows 的现有中文文章，均使用某种第三方工具或脚本将 Windows “解压”到目标虚拟磁盘。这些工具多数只为对应的教程所写，没有被长期维护，不够可靠。
 
 实际上你可以使用 Windows 自带的工具 `DISM` 简单地“解压” Windows 安装镜像。
 
@@ -180,7 +180,7 @@ dism /Get-ImageInfo /ImageFile:[你的 install.wim 位置]
 
 > <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 你需要将上方的 `[你的 install.wim 位置]` 替换成你 `install.wim` 的实际位置。同样你也需要替换所有后续使用方括号 `[]` 引用的数值。
 
-这是 *noarch* 的运行结果：
+这是 noarch 的运行结果：
 
 ```
 PS C:\Windows\system32> dism /Get-ImageInfo /ImageFile:D:\sources\install.wim
@@ -225,7 +225,7 @@ PS C:\Windows\system32> dism /Get-ImageInfo /ImageFile:D:\sources\install.wim
 
 在运行完上述命令后请选择 ~~困难~~ 一个 Windows 版本，并记住它的“索引”号。
 
-*noarch* 在这里选择 “Windows 10 专业工作站版”子镜像，其“索引”是6.
+noarch 在这里选择 “Windows 10 专业工作站版”子镜像，其“索引”是6.
 
 关于 Windows 10 各个版本 (edition) 的区别，请见 [https://www.microsoft.com/zh-cn/WindowsForBusiness/Compare](https://www.microsoft.com/zh-cn/WindowsForBusiness/Compare).
 
@@ -245,7 +245,7 @@ dism /Apply-Image /ImageFile:[你的 install.wim 位置] /Index:[你选择的版
 
 > <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 在上方的 `DISM` 命令里，许多选项具有从属关系。例如你不能将 `/Index:` 移动到 `/ApplyDir` 后面，因为 `/Index:` 从属于 `/ImageFile:`. 如果你运行时出错了，建议你检查一下选项的顺序。
 
-在 *noarch* 的例子里，是执行这个命令：
+在 noarch 的例子里，是执行这个命令：
 
 ```
 dism /Apply-Image /ImageFile:D:\sources\install.wim /Index:6 /ApplyDir:E: /Verify /Check-Integrity
@@ -289,7 +289,7 @@ bcdboot [你虚拟磁盘的盘符:]\Windows
 - `/l zh-CN` : 设置新添加的启动引导器语言为简体中文。`bcdboot` 命令添加的启动项默认语言是美式英语 `en-us`.
 	- 如果你在安装一个繁体中文 Windows, 请使用 `/l zh-TW`.
 
-例如 *noarch* 的虚拟磁盘盘符为 `E:` , 这是我的运行结果：
+例如 noarch 的虚拟磁盘盘符为 `E:` , 这是我的运行结果：
 
 ```
 PS C:\Windows\system32> bcdboot /d /l zh-CN E:\Windows
@@ -366,7 +366,7 @@ bootmenupolicy          Standard
 
 在每个 "Windows 启动加载器" 下的 `标识符` 就是我们要用的 `UUID`.
 
-`device` 行代表启动项所使用的设备；目前我们的虚拟磁盘依然在挂载状态，所以 `device` 会返回当前虚拟磁盘被挂载到的盘符。在 *noarch* 的例子里，它是 `E:`, 对应的 `UUID` 是 `{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}`.
+`device` 行代表启动项所使用的设备；目前我们的虚拟磁盘依然在挂载状态，所以 `device` 会返回当前虚拟磁盘被挂载到的盘符。在 noarch 的例子里，它是 `E:`, 对应的 `UUID` 是 `{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}`.
 
 选中然后右击鼠标复制这个标识符，然后运行：
 
@@ -376,7 +376,7 @@ bcdedit /set "[你的启动项 UUID]" description "[启动项描述]"
 
 > <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 因为 `PowerShell` 与 `CMD` 对待字符串的方式不同， 在 `PowerShell` 里，启动项 `UUID` 以及描述需要用双引号 `"` 或单引号 `'` 括起来。
 
-在 *noarch* 的例子里，这是我运行的实际命令以及结果：
+在 noarch 的例子里，这是我运行的实际命令以及结果：
 
 ```
 PS C:\Windows\system32> bcdedit /set "{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}" description "位于 VHDX 内的 Windows 10 专业工作站版"
@@ -391,13 +391,13 @@ PS C:\Windows\system32> bcdedit /set "{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}" de
 
 重启选择新安装的 Windows 后，Windows 可能会多重启几次；而这些重启依然会通过原系统的启动引导器进行，因此你需要在电脑前 ~~坐和放宽~~ 并且准备在启动菜单中选择虚拟磁盘内的 Windows 安装。
 
-*noarch* 将不在此赘述 `OOBE`（开箱体验），详细的过程请看 [OOBE 注意事项（未完成）。]()
+noarch 将不在此赘述 `OOBE`（开箱体验），详细的过程请看 [OOBE 注意事项（未完成）。]()
 
 ### 激活
 
 如果你在一台预装了正版 Windows 的机器上安装对应版本的 Windows（通常为 Windows 家庭单语言版），Windows 会读取主板固件内的数字证书自动激活。如果 Windows 没有自动激活，你需要购买一个 Windows 的授权。
 
-因为法律原因（没错，求生欲挺强），*noarch* 将不描述<a href="https://kms.cangshui.net" style="color:#333333">使用 KMS 服务器激活的方法。</a>
+因为法律原因（没错，求生欲挺强），noarch 将不描述<a href="https://kms.cangshui.net" style="color:#333333">使用 KMS 服务器激活的方法。</a>
 
 ~~使用微软®软件正版授权 安全 稳定 声誉~~
 
@@ -542,7 +542,7 @@ bcdedit /delete "{6e430704-1163-11eb-b935-d3152726ad7a}"
 
 ## 总结
 
-最后 *noarch* 再次提醒，**VHD 以及其它双系统手段不能作为对恶意软件的防护**。
+最后 noarch 再次提醒，**VHD 以及其它双系统手段不能作为对恶意软件的防护**。
 
 它能做到的，是提升软件访问你数据的门槛，以及防止软件注册后台服务实时监控你的行为。
 
