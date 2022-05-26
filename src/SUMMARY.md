@@ -79,7 +79,7 @@
 	- [网上教程不会告诉你的类 Unix 使用注意事项](Tricks-Unix/dos-donts/dos-donts.md)
 
 - [番外]()
-	- [在虚空中与 amitié 相遇：Void Linux 和 FLOWERS 四季的邂逅 上篇](Extras/flowers-p1/index.md)
+	- [**在虚空中与 amitié 相遇：Void Linux 和 FLOWERS 四季的邂逅 上篇 ^**](Extras/flowers-p1/index.md)
 
 [后记]()
 
