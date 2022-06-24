@@ -80,6 +80,7 @@
 
 - [番外]()
 	- [**在虚空中与 amitié 相遇：Void Linux 和 FLOWERS 四季的邂逅 上篇 ^**](Extras/flowers-p1/index.md)
+	- [**Textractor 是情感的信使：Void Linux 和 FLOWERS 四季的邂逅 下篇 ^**](Extras/flowers-p2/index.md)
 
 [后记]()
 
