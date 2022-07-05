@@ -4,11 +4,13 @@
 
 <script type="text/javascript">
 function showIframe() {
-    document.getElementById("sc_frame").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/307308303&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false";
+    let frame = document.getElementById("sc_frame")
+    frame.height = 166
+    frame.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/307308303&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 }
 </script>
 <a href="#" onclick="showIframe()">夏空の光 - 考崎千鳥&八重垣えりか on Soundcloud</a>
-<iframe id="sc_frame" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" data-src="" src="about:blank"></iframe>
+<iframe id="sc_frame" width="100%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="about:blank" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe>
 
 
 ## 序章
